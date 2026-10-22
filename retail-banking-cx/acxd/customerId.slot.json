@@ -1,0 +1,39 @@
+{
+  "slotId": "customerId",
+  "description": "Valid AnyBank customer identifiers. The enumeration is the validation and canonicalises casing, so cust-12345 resolves to CUST-12345.",
+  "sensitive": false,
+  "tags": [],
+  "values": [
+    {
+      "value": "CUST-12345",
+      "valueId": "custRbAnyBankValue001a",
+      "synonyms": [],
+      "choicePayload": "",
+      "translated": false,
+      "skipTranslation": false
+    },
+    {
+      "value": "CUST-67890",
+      "valueId": "custRbAnyBankValue002b",
+      "synonyms": [],
+      "choicePayload": "",
+      "translated": false,
+      "skipTranslation": false
+    },
+    {
+      "value": "CUST-11111",
+      "valueId": "custRbAnyBankValue003c",
+      "synonyms": [],
+      "choicePayload": "",
+      "translated": false,
+      "skipTranslation": false
+    }
+  ],
+  "path": "",
+  "type": "multilingual",
+  "masterLanguageCode": "en-US",
+  "languageCodes": [
+    "en-US"
+  ],
+  "mirroring": "none"
+}

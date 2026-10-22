@@ -1,0 +1,13 @@
+{
+  "key": "handoffSummary",
+  "schema": {
+    "type": "string",
+    "isSensitive": false,
+    "title": "",
+    "description": "A short note for the person who picks up, written by the Agent handoff summary node from the conversation transcript. That node writes it into a flow-local, which does not leave the flow; a state modification on the Escalate node copies it into this Context Variable, and that is what carries it across to Amazon Connect Customer. Part 4 has the participant add the state modification, so this variable is empty until they do."
+  },
+  "disallowExternalModification": true,
+  "tags": [],
+  "path": "",
+  "type": "text"
+}

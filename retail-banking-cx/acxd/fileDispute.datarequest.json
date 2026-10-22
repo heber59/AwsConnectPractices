@@ -1,0 +1,27 @@
+{
+  "dataRequestId": "fileDispute",
+  "webhook": {
+    "version": "v3",
+    "sendContext": true,
+    "implementation": "external",
+    "method": "POST",
+    "environments": {
+      "production": {
+        "url": "{API_URL_Base:NLX.Secret}/retail-banking/disputes?customerId={customerId}&transactionId={transactionId}&reason={reason}&amount={amount}",
+        "headers": [
+          {
+            "key": "x-api-key",
+            "value": "{API_Key:NLX.Secret}",
+            "dynamic": false,
+            "required": false
+          }
+        ]
+      }
+    }
+  },
+  "description": "Dispute a charge (transactionId TXN-BK-0000 from getTransactions). amount is positive; reason in the caller's words. Read the merchant, amount and date back first.",
+  "sensitive": false,
+  "streamStateModifications": true,
+  "tags": [],
+  "path": ""
+}

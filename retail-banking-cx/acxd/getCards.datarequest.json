@@ -1,0 +1,27 @@
+{
+  "dataRequestId": "getCards",
+  "webhook": {
+    "version": "v3",
+    "sendContext": true,
+    "implementation": "external",
+    "method": "GET",
+    "environments": {
+      "production": {
+        "url": "{API_URL_Base:NLX.Secret}/retail-banking/cards?customerId={customerId}",
+        "headers": [
+          {
+            "key": "x-api-key",
+            "value": "{API_Key:NLX.Secret}",
+            "dynamic": false,
+            "required": false
+          }
+        ]
+      }
+    }
+  },
+  "description": "List the caller's cards and their current status",
+  "sensitive": false,
+  "streamStateModifications": false,
+  "tags": [],
+  "path": ""
+}

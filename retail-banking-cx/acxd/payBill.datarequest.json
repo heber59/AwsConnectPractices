@@ -1,0 +1,27 @@
+{
+  "dataRequestId": "payBill",
+  "webhook": {
+    "version": "v3",
+    "sendContext": true,
+    "implementation": "external",
+    "method": "POST",
+    "environments": {
+      "production": {
+        "url": "{API_URL_Base:NLX.Secret}/retail-banking/payments?customerId={customerId}&payeeId={payeeId}&fromAccountId={fromAccountId}&amount={amount}",
+        "headers": [
+          {
+            "key": "x-api-key",
+            "value": "{API_Key:NLX.Secret}",
+            "dynamic": false,
+            "required": false
+          }
+        ]
+      }
+    }
+  },
+  "description": "Pay a saved payee (payeeId PAYEE-000 from getPayees) from an account (from getAccounts); amount in dollars. Confirm payee, account and amount out loud first.",
+  "sensitive": false,
+  "streamStateModifications": true,
+  "tags": [],
+  "path": ""
+}

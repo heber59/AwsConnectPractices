@@ -1,0 +1,22 @@
+[
+  {
+    "applicationId": "049e1104-20ab-48b0-ac8c-37d104e86db6",
+    "name": "Workshop",
+    "description": "",
+    "metadata": {
+      "path": "",
+      "tags": []
+    },
+    "createdAt": "2026-10-22T21:12:03.753Z",
+    "updatedAt": "2026-10-22T21:24:18.249Z"
+  },
+  {
+    "applicationId": "d59a13af-7f93-4edc-81a7-08c7b2acadc6",
+    "name": "Retail Banking",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-22T20:55:04.836Z",
+    "updatedAt": "2026-10-22T20:55:04.836Z"
+  }
+]

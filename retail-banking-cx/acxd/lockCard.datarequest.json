@@ -1,0 +1,27 @@
+{
+  "dataRequestId": "lockCard",
+  "webhook": {
+    "version": "v3",
+    "sendContext": true,
+    "implementation": "external",
+    "method": "POST",
+    "environments": {
+      "production": {
+        "url": "{API_URL_Base:NLX.Secret}/retail-banking/cards/{cardId}/lock",
+        "headers": [
+          {
+            "key": "x-api-key",
+            "value": "{API_Key:NLX.Secret}",
+            "dynamic": false,
+            "required": false
+          }
+        ]
+      }
+    }
+  },
+  "description": "Freeze a card now (cardId CARD-0000 from getCards; confirm it by its last four digits). Reversible, so it is the safe first move.",
+  "sensitive": false,
+  "streamStateModifications": true,
+  "tags": [],
+  "path": ""
+}

@@ -1,0 +1,40 @@
+{
+  "dataRequestId": "getDisputes",
+  "type": "object",
+  "webhook": {
+    "method": "GET",
+    "sendContext": true,
+    "environments": {
+      "production": {
+        "headers": [
+          {
+            "dynamic": false,
+            "value": "{API_Key:NLX.Secret}",
+            "key": "x-api-key",
+            "required": false
+          }
+        ],
+        "url": "{API_URL_Base:NLX.Secret}/retail-banking/disputes?customerId={customerId}"
+      }
+    },
+    "implementation": "external"
+  },
+  "requestSchema": {
+    "type": "object",
+    "properties": {},
+    "isSensitive": false
+  },
+  "responseSchema": {
+    "type": "object",
+    "properties": {},
+    "isSensitive": false
+  },
+  "sensitive": false,
+  "description": "Check the caller's existing disputes before filing a new one",
+  "metadata": {
+    "tags": []
+  },
+  "createdAt": "2026-10-22T21:08:50.964Z",
+  "updatedAt": "2026-10-22T21:08:50.964Z",
+  "updatedBy": "hesan"
+}

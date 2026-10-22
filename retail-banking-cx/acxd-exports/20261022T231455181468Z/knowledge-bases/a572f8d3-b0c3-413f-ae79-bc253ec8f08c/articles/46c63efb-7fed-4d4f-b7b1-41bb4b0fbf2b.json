@@ -1,0 +1,19 @@
+{
+  "knowledgeBaseId": "a572f8d3-b0c3-413f-ae79-bc253ec8f08c",
+  "articleId": "46c63efb-7fed-4d4f-b7b1-41bb4b0fbf2b",
+  "question": {
+    "messageId": "a1b11003-0003-4a03-9a03-aa0300000003",
+    "text": "How long does a dispute take, and do I get the money back while you investigate?"
+  },
+  "responses": [
+    {
+      "type": "text",
+      "body": "Once a dispute is filed we acknowledge it within one business day and then have ten business days to investigate. If the investigation is going to take longer than that, we issue a provisional credit for the disputed amount within those ten business days so you are not out of pocket while we work, and we then have up to forty-five days in total to finish, or ninety days if the charge was made outside the country or at a point of sale rather than online. You keep the provisional credit unless the investigation finds the charge was legitimate, and if that happens we tell you in writing before it is reversed, with at least five days' notice. Report an unauthorised charge as soon as you notice it: your liability is capped at fifty dollars if you tell us within two business days of the statement, and reporting promptly is what keeps it there. Filing a dispute does not stop the card being used again, so if the charge was fraud rather than a mistake, lock the card as well.",
+      "messageId": "a1b11003-0003-4a03-9a03-bb0300000003"
+    }
+  ],
+  "payload": "",
+  "createdAt": "2026-10-22T21:09:55.810Z",
+  "updatedAt": "2026-10-22T21:09:55.810Z",
+  "updatedBy": "hesan"
+}

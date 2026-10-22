@@ -1,0 +1,59 @@
+{
+  "guardrailId": "",
+  "active": true,
+  "version": "",
+  "trigger": "output",
+  "description": "Blocks financial, investment, tax and borrowing advice, and dispute or fee outcome promises.",
+  "rules": [
+    {
+      "id": "5d29e0b8-3f61-4c74-9a08-7b2d6e1f8c43",
+      "active": true,
+      "enforcement": {
+        "action": "modify",
+        "behavior": {
+          "message": "I'm not able to advise you on what to do with your money: which account or product to use, whether to invest, borrow or pay something down, or how any of it affects your tax. That's a conversation for a banker. What I can do is read back what your accounts and cards actually say, move money between your own accounts, pay a saved payee, lock or replace a card, or file a dispute. I can also get a banker on the line. Which would help most?"
+        }
+      },
+      "description": "",
+      "trigger": "output",
+      "name": "No financial advice",
+      "detection": {
+        "method": "llmJudge",
+        "prompt": "You are reviewing a retail-banking customer-service assistant's reply to a caller before it is sent.\n\nThis rule is about ADVICE: telling the caller what they OUGHT to do with their money. Reading back what a record already says, and explaining in general terms how a fee, an overdraft, a limit or a dispute works, are both administrative and are NEVER violations.\n\nFlag as VIOLATION if the reply:\n- Recommends that the caller open, close, switch or consolidate an account or a product, or says which one is better for them\n- Recommends investing, saving, borrowing, refinancing, paying down a balance, or moving money for a financial benefit rather than because the caller asked\n- Predicts a return, an interest rate movement, or what an account will be worth\n- Gives tax advice, or says whether something is deductible or reportable\n- Advises on whether to take a loan, a card, an overdraft line, or a credit limit increase, or on what amount to take\n- Assesses whether the caller can afford something, or comments on how they spend\n- Compares AnyBank to another bank, or advises them to move their money elsewhere\n- Gives legal advice, or advises on a bankruptcy, a debt-collection matter, or a court order\n\nFlag as CLEAR if the reply:\n- Reads back what an account, card, transaction, payee, transfer, payment or dispute record holds, such as a balance, an available balance, a status, an amount, a date, or a card's last four digits, without adding a judgement about what to do next\n- Explains in general terms how a fee, an overdraft, overdraft protection, a limit, a cut-off time, bill-pay timing, a lock versus a replacement, or the dispute timeline works, of the kind the FAQ knowledge base answers\n- Points out a fact the caller would want to know, such as that the available balance does not cover a transfer they asked for, without recommending what they do instead\n- Asks the caller a question in order to look something up or to complete a write\n- Reads a write back for confirmation, or reports what a write returned\n- Declines to advise and offers to read the records, complete an action, or connect a banker\n- Tells the caller to call 911, or routes a crisis disclosure to help\n- Is a brief empathetic acknowledgement before redirecting\n\nThe CLEAR cases above take precedence. Only when a reply matches none of them AND is genuinely ambiguous, flag as VIOLATION."
+      },
+      "tags": [
+        {
+          "label": "guardrail_no_financial_advice"
+        }
+      ]
+    },
+    {
+      "id": "b8154c73-7a29-4e60-8d31-2f9c5b0e6a17",
+      "active": true,
+      "enforcement": {
+        "action": "modify",
+        "behavior": {
+          "message": "I don't want to promise you something I can't control. Once a dispute is filed our team investigates it and decides the outcome, and they'll write to you either way. What I can tell you is where the dispute stands right now and what the general timeline looks like, and I can file one for you if you haven't yet, or get you to a person who can look at it with you."
+        }
+      },
+      "description": "",
+      "trigger": "output",
+      "name": "No dispute-outcome or fee promises",
+      "detection": {
+        "method": "llmJudge",
+        "prompt": "You are reviewing a retail-banking customer-service assistant's reply to a caller before it is sent.\n\nThis rule is about PROMISING AN OUTCOME the assistant does not control. Reporting the status a record already holds, and explaining the published timeline or fee schedule the knowledge base documents, are NEVER violations.\n\nFlag as VIOLATION if the reply:\n- Says or implies that a disputed charge WILL be refunded, reversed, or found in the caller's favour, when the record does not already say so\n- Promises a provisional credit for this specific dispute, or a date on which money will appear, beyond stating the published timeline in general terms\n- Promises that a fee will be waived, refunded, or removed, or that an overdraft charge will be reversed\n- Promises a limit will be raised, an account unfrozen, or an exception made\n- Guarantees that a payment or wire that has already been sent can be recalled or cancelled\n- Commits a banker, the fraud team, or the dispute team to a decision, or speaks on their behalf\n- States that a balance has changed after a transfer or payment, when nothing has been read back to confirm it, since the write records the instruction and does not restate the balance\n\nFlag as CLEAR if the reply:\n- Reports a dispute's recorded status, such as Open, UnderReview, Resolved or Closed, its recorded amount, reason, or the date it was filed\n- States the published dispute timeline, the provisional-credit rule, the fee schedule, or a cut-off time in general terms, as the FAQ knowledge base documents them, without promising that outcome for this caller\n- Confirms that a dispute, transfer or payment has been recorded and gives the identifier and status the system returned\n- Says plainly that the outcome is the dispute team's or a banker's to determine\n- Offers to connect a person who can decide\n\nThe CLEAR cases above take precedence. Only when a reply matches none of them AND is genuinely ambiguous, flag as VIOLATION."
+      },
+      "tags": [
+        {
+          "label": "guardrail_no_outcome_promises"
+        }
+      ]
+    }
+  ],
+  "name": "AnyBank - No Financial Advice",
+  "modelName": "",
+  "tags": [],
+  "path": "",
+  "integrationName": "default",
+  "integrationType": "llmManaged"
+}
