@@ -1,0 +1,27 @@
+{
+  "dataRequestId": "replaceCard",
+  "webhook": {
+    "version": "v3",
+    "sendContext": true,
+    "implementation": "external",
+    "method": "POST",
+    "environments": {
+      "production": {
+        "url": "{API_URL_Base:NLX.Secret}/retail-banking/cards/{cardId}/replace?reason={reason}",
+        "headers": [
+          {
+            "key": "x-api-key",
+            "value": "{API_Key:NLX.Secret}",
+            "dynamic": false,
+            "required": false
+          }
+        ]
+      }
+    }
+  },
+  "description": "Cancel a card (CARD-0000) and order a replacement. reason: lost, stolen or damaged; ask the caller. CANNOT be undone, so confirm explicitly first.",
+  "sensitive": false,
+  "streamStateModifications": true,
+  "tags": [],
+  "path": ""
+}

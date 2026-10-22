@@ -1,0 +1,439 @@
+{
+  "Arn": "arn:aws:connect:us-east-1:600627335446:instance/45017c34-af28-4976-9d04-ca6c9cad18ac/contact-flow/0549e599-2ffc-48d4-930c-6c31f25d9860",
+  "Id": "0549e599-2ffc-48d4-930c-6c31f25d9860",
+  "Name": "MainFlow",
+  "Type": "CONTACT_FLOW",
+  "State": "ACTIVE",
+  "Status": "PUBLISHED",
+  "Description": "",
+  "Content": {
+    "Version": "2019-10-30",
+    "StartAction": "ba322191-2544-41f8-a14b-4f013de60111",
+    "Metadata": {
+      "entryPointPosition": {
+        "x": 40,
+        "y": 40
+      },
+      "ActionMetadata": {
+        "4503e30e-5da9-4594-91c7-d5e9899d8876": {
+          "position": {
+            "x": 1045.6,
+            "y": 529.6
+          }
+        },
+        "9bac69c4-7850-4c0a-83ea-536cb6fe7297": {
+          "position": {
+            "x": 952,
+            "y": 197.6
+          }
+        },
+        "2a11d7ea-67dd-4012-9b9d-04024525bf91": {
+          "position": {
+            "x": 835.2,
+            "y": 373.6
+          },
+          "parameters": {
+            "QueueId": {
+              "displayName": "BasicQueue"
+            }
+          },
+          "queue": {
+            "text": "BasicQueue"
+          }
+        },
+        "1a92d2cc-668f-4e62-a29c-7b9b6983e454": {
+          "position": {
+            "x": 379.2,
+            "y": 42.4
+          }
+        },
+        "fe7f904d-1a62-4083-bbcd-c5e04ed32f1f": {
+          "position": {
+            "x": 159.2,
+            "y": 44.8
+          }
+        },
+        "ba322191-2544-41f8-a14b-4f013de60111": {
+          "position": {
+            "x": -65.6,
+            "y": 150.4
+          }
+        },
+        "4b3427f4-db98-42ae-8f23-3283300964ef": {
+          "position": {
+            "x": 116,
+            "y": 360.8
+          },
+          "children": [
+            "0697ecc1-6f02-492f-83b9-5be00d860338"
+          ],
+          "parameters": {
+            "TextToSpeechVoice": {
+              "languageCode": "en-US"
+            },
+            "TextToSpeechEngine": {
+              "voiceProvider": "connect:agentic"
+            }
+          },
+          "overrideConsoleVoice": true,
+          "fragments": {
+            "SetContactData": "0697ecc1-6f02-492f-83b9-5be00d860338"
+          },
+          "overrideLanguageAttribute": true
+        },
+        "0697ecc1-6f02-492f-83b9-5be00d860338": {
+          "position": {
+            "x": 116,
+            "y": 360.8
+          },
+          "dynamicParams": []
+        },
+        "63d874c8-05be-4796-901a-13359a14b636": {
+          "position": {
+            "x": 620.8,
+            "y": 587.2
+          }
+        },
+        "1c3a31c3-3449-45fd-9511-3807e78ebb78": {
+          "position": {
+            "x": 618.4,
+            "y": 190.4
+          }
+        },
+        "a764a866-29c0-41d6-ac18-18da7175586e": {
+          "position": {
+            "x": 627.2,
+            "y": 402.4
+          },
+          "parameters": {
+            "Attributes": {
+              "handoffSummary": {
+                "useDynamic": true
+              }
+            }
+          },
+          "dynamicParams": [
+            "handoffSummary"
+          ]
+        },
+        "ab3b6681-6251-45cf-b93a-dd839e31c905": {
+          "position": {
+            "x": 378.4,
+            "y": 363.2
+          },
+          "isFriendlyName": false,
+          "parameters": {
+            "AgentConfiguration": {
+              "WorkspaceId": {
+                "displayName": "Retail Banking",
+                "useDropdown": "true"
+              },
+              "ContextVariables": {
+                "customerId": {
+                  "displayName": "customerId"
+                }
+              },
+              "ApplicationId": {
+                "displayName": "Workshop"
+              },
+              "Alias": {
+                "displayName": "Production"
+              }
+            },
+            "SpeechRecognitionConfiguration": {
+              "SpeechRecognitionEngine": {
+                "displayName": "Amazon Connect agentic voice (recommended)"
+              }
+            }
+          }
+        }
+      },
+      "Annotations": []
+    },
+    "Actions": [
+      {
+        "Parameters": {},
+        "Identifier": "4503e30e-5da9-4594-91c7-d5e9899d8876",
+        "Type": "TransferContactToQueue",
+        "Transitions": {
+          "NextAction": "9bac69c4-7850-4c0a-83ea-536cb6fe7297",
+          "Errors": [
+            {
+              "NextAction": "9bac69c4-7850-4c0a-83ea-536cb6fe7297",
+              "ErrorType": "QueueAtCapacity"
+            },
+            {
+              "NextAction": "9bac69c4-7850-4c0a-83ea-536cb6fe7297",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {},
+        "Identifier": "9bac69c4-7850-4c0a-83ea-536cb6fe7297",
+        "Type": "DisconnectParticipant",
+        "Transitions": {}
+      },
+      {
+        "Parameters": {
+          "QueueId": "arn:aws:connect:us-east-1:600627335446:instance/45017c34-af28-4976-9d04-ca6c9cad18ac/queue/7c71ac10-0cf9-4f4e-8c3b-2c9cd5e95937"
+        },
+        "Identifier": "2a11d7ea-67dd-4012-9b9d-04024525bf91",
+        "Type": "UpdateContactTargetQueue",
+        "Transitions": {
+          "NextAction": "4503e30e-5da9-4594-91c7-d5e9899d8876",
+          "Errors": [
+            {
+              "NextAction": "4503e30e-5da9-4594-91c7-d5e9899d8876",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ChatBehavior": {
+            "ChatAnalyticsBehavior": {
+              "Enabled": "True",
+              "AnalyticsLanguage": "en-US",
+              "AnalyticsModes": [
+                "ContactLens"
+              ],
+              "ConversationalAnalyticsRedactionConfiguration": {
+                "Enabled": "False"
+              },
+              "InFlightChatRedactionConfiguration": {
+                "Enabled": "False"
+              },
+              "SentimentConfiguration": {
+                "Enabled": "True"
+              },
+              "SummaryConfiguration": {
+                "SummaryModes": [
+                  "PostContact",
+                  "AutomatedInteraction"
+                ]
+              }
+            }
+          }
+        },
+        "Identifier": "1a92d2cc-668f-4e62-a29c-7b9b6983e454",
+        "Type": "UpdateContactRecordingAndAnalyticsBehavior",
+        "Transitions": {
+          "NextAction": "4b3427f4-db98-42ae-8f23-3283300964ef",
+          "Errors": [
+            {
+              "NextAction": "4b3427f4-db98-42ae-8f23-3283300964ef",
+              "ErrorType": "NoMatchingError"
+            },
+            {
+              "NextAction": "4b3427f4-db98-42ae-8f23-3283300964ef",
+              "ErrorType": "ChannelMismatch"
+            },
+            {
+              "NextAction": "4b3427f4-db98-42ae-8f23-3283300964ef",
+              "ErrorType": "InFlightRedactionConfigurationFailed"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "VoiceBehavior": {
+            "VoiceRecordingBehavior": {
+              "RecordedParticipants": [
+                "Agent",
+                "Customer"
+              ],
+              "IVRRecordingBehavior": "Enabled"
+            },
+            "VoiceAnalyticsBehavior": {
+              "Enabled": "True",
+              "AnalyticsLanguage": "en-US",
+              "AnalyticsModes": [
+                "RealTime",
+                "AutomatedInteraction"
+              ],
+              "ConversationalAnalyticsRedactionConfiguration": {
+                "Enabled": "False"
+              },
+              "SentimentConfiguration": {
+                "Enabled": "True"
+              },
+              "SummaryConfiguration": {
+                "SummaryModes": [
+                  "PostContact",
+                  "AutomatedInteraction"
+                ]
+              }
+            }
+          }
+        },
+        "Identifier": "fe7f904d-1a62-4083-bbcd-c5e04ed32f1f",
+        "Type": "UpdateContactRecordingAndAnalyticsBehavior",
+        "Transitions": {
+          "NextAction": "1a92d2cc-668f-4e62-a29c-7b9b6983e454",
+          "Errors": [
+            {
+              "NextAction": "1a92d2cc-668f-4e62-a29c-7b9b6983e454",
+              "ErrorType": "NoMatchingError"
+            },
+            {
+              "NextAction": "1a92d2cc-668f-4e62-a29c-7b9b6983e454",
+              "ErrorType": "ChannelMismatch"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "FlowLoggingBehavior": "Enabled"
+        },
+        "Identifier": "ba322191-2544-41f8-a14b-4f013de60111",
+        "Type": "UpdateFlowLoggingBehavior",
+        "Transitions": {
+          "NextAction": "fe7f904d-1a62-4083-bbcd-c5e04ed32f1f"
+        }
+      },
+      {
+        "Parameters": {
+          "TextToSpeechVoice": "KATIE",
+          "TextToSpeechEngine": "connect:agentic"
+        },
+        "Identifier": "4b3427f4-db98-42ae-8f23-3283300964ef",
+        "Type": "UpdateContactTextToSpeechVoice",
+        "Transitions": {
+          "NextAction": "0697ecc1-6f02-492f-83b9-5be00d860338",
+          "Errors": [
+            {
+              "NextAction": "ab3b6681-6251-45cf-b93a-dd839e31c905",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "LanguageCode": "en-US"
+        },
+        "Identifier": "0697ecc1-6f02-492f-83b9-5be00d860338",
+        "Type": "UpdateContactData",
+        "Transitions": {
+          "NextAction": "ab3b6681-6251-45cf-b93a-dd839e31c905",
+          "Errors": [
+            {
+              "NextAction": "ab3b6681-6251-45cf-b93a-dd839e31c905",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "SkipWhenDTMFBufferEnabled": "false",
+          "Text": "Let me get you to someone who can help"
+        },
+        "Identifier": "63d874c8-05be-4796-901a-13359a14b636",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "4503e30e-5da9-4594-91c7-d5e9899d8876",
+          "Errors": [
+            {
+              "NextAction": "4503e30e-5da9-4594-91c7-d5e9899d8876",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "SkipWhenDTMFBufferEnabled": "false",
+          "Text": "Thanks for contacting us"
+        },
+        "Identifier": "1c3a31c3-3449-45fd-9511-3807e78ebb78",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "9bac69c4-7850-4c0a-83ea-536cb6fe7297",
+          "Errors": [
+            {
+              "NextAction": "9bac69c4-7850-4c0a-83ea-536cb6fe7297",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "Attributes": {
+            "handoffSummary": "$.AgenticCX.ContextVariables.handoffSummary"
+          },
+          "TargetContact": "Current"
+        },
+        "Identifier": "a764a866-29c0-41d6-ac18-18da7175586e",
+        "Type": "UpdateContactAttributes",
+        "Transitions": {
+          "NextAction": "2a11d7ea-67dd-4012-9b9d-04024525bf91",
+          "Errors": [
+            {
+              "NextAction": "2a11d7ea-67dd-4012-9b9d-04024525bf91",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Identifier": "ab3b6681-6251-45cf-b93a-dd839e31c905",
+        "Type": "ConnectParticipantWithAgenticCX",
+        "Parameters": {
+          "AgentConfiguration": {
+            "WorkspaceId": "45b91264-dcdb-49ab-8579-6346245d20bc",
+            "ContextVariables": {
+              "customerId": "CUST-001"
+            },
+            "ApplicationId": "049e1104-20ab-48b0-ac8c-37d104e86db6",
+            "Alias": "QgULtkVzbFKspCXGtxtEE"
+          },
+          "SpeechRecognitionConfiguration": {
+            "SpeechRecognitionEngine": "AMAZON_AGENTIC_VOICE"
+          },
+          "AudioFillerConfiguration": {
+            "Enabled": false
+          }
+        },
+        "Transitions": {
+          "NextAction": "63d874c8-05be-4796-901a-13359a14b636",
+          "Errors": [
+            {
+              "NextAction": "63d874c8-05be-4796-901a-13359a14b636",
+              "ErrorType": "NoMatchingError"
+            },
+            {
+              "NextAction": "1c3a31c3-3449-45fd-9511-3807e78ebb78",
+              "ErrorType": "NoMatchingCondition"
+            },
+            {
+              "NextAction": "63d874c8-05be-4796-901a-13359a14b636",
+              "ErrorType": "InputTimeLimitExceeded"
+            }
+          ],
+          "Conditions": [
+            {
+              "NextAction": "a764a866-29c0-41d6-ac18-18da7175586e",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "Escalation"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Tags": {},
+  "FlowContentSha256": "1097116e5691ddf3d3dd8cfc5bb0d4e6b0863b23bf4d0814594d1fc57200c403",
+  "LastModifiedTime": "2026-10-22 16:35:14.588000-05:00",
+  "LastModifiedRegion": "us-east-1"
+}

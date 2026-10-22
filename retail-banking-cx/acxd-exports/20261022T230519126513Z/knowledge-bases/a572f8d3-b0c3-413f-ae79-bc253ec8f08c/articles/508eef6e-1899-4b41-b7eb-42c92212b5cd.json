@@ -1,0 +1,19 @@
+{
+  "knowledgeBaseId": "a572f8d3-b0c3-413f-ae79-bc253ec8f08c",
+  "articleId": "508eef6e-1899-4b41-b7eb-42c92212b5cd",
+  "question": {
+    "messageId": "a1b11001-0001-4a01-9a01-aa0100000001",
+    "text": "What fees does my account charge, and how do I avoid them?"
+  },
+  "responses": [
+    {
+      "type": "text",
+      "body": "Checking accounts carry a twelve dollar monthly service fee, and it is waived in any month where you either keep a fifteen hundred dollar minimum daily balance, receive a qualifying direct deposit of five hundred dollars or more, or hold Gold, Platinum or higher status. Savings accounts have no monthly fee. The fees people actually run into are the ones tied to a single event rather than to the month: thirty-four dollars for an overdraft, twelve dollars for a returned item, three dollars at an out-of-network cash machine plus whatever the machine's owner charges, and twenty-five dollars for an outgoing domestic wire. There is no fee for a transfer between your own accounts, for standard bill pay, for locking or unlocking a card, or for filing a dispute. Statements are free electronically; a paper statement is two dollars a month.",
+      "messageId": "a1b11001-0001-4a01-9a01-bb0100000001"
+    }
+  ],
+  "payload": "",
+  "createdAt": "2026-10-22T21:09:55.810Z",
+  "updatedAt": "2026-10-22T21:09:55.810Z",
+  "updatedBy": "hesan"
+}

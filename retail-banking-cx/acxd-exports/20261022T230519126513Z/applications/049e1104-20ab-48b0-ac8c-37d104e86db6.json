@@ -1,0 +1,69 @@
+{
+  "applicationId": "049e1104-20ab-48b0-ac8c-37d104e86db6",
+  "name": "Workshop",
+  "flows": [
+    {
+      "flowId": "Entry"
+    },
+    {
+      "flowId": "Main"
+    }
+  ],
+  "settings": {
+    "clusters": {
+      "enabled": false,
+      "frequency": {
+        "count": 1,
+        "resolution": "MONTH"
+      },
+      "phraseThreshold": {
+        "count": 100
+      },
+      "retention": {
+        "count": 30,
+        "resolution": "DAY"
+      }
+    },
+    "conversationTTL": 5,
+    "guardrails": [],
+    "languageCode": "en-US",
+    "languageCodes": [
+      "en-US"
+    ],
+    "languageSettings": [
+      {
+        "languageCode": "en-US",
+        "useLex3pAsr": false
+      }
+    ],
+    "lifecycleHooks": {},
+    "repeatOnIncomprehension": false,
+    "thresholds": {
+      "incomprehensionCount": 2
+    },
+    "defaultFlows": {
+      "ACXD.Fallback": {
+        "flowId": "Main"
+      },
+      "ACXD.Unknown": {
+        "flowId": "Main"
+      },
+      "ACXD.Welcome": {
+        "flowId": "Entry"
+      }
+    }
+  },
+  "description": "",
+  "metadata": {
+    "path": "",
+    "tags": []
+  },
+  "deploymentSettings": {
+    "oneClickDeployEnabled": false,
+    "environment": "production",
+    "contextVariables": []
+  },
+  "createdAt": "2026-10-22T21:12:03.753Z",
+  "updatedAt": "2026-10-22T21:24:18.249Z",
+  "updatedBy": "hesan"
+}

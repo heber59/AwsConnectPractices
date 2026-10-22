@@ -1,0 +1,9 @@
+[
+  {
+    "Id": "988357be-d382-4411-b03a-7fcd653211b7",
+    "Arn": "arn:aws:connect:us-east-1:600627335446:instance/45017c34-af28-4976-9d04-ca6c9cad18ac/routing-profile/988357be-d382-4411-b03a-7fcd653211b7",
+    "Name": "Basic Routing Profile",
+    "LastModifiedTime": "2026-10-22 12:49:20.445000-05:00",
+    "LastModifiedRegion": "us-east-1"
+  }
+]

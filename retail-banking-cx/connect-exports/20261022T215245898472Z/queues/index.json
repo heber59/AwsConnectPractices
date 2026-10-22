@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "7c71ac10-0cf9-4f4e-8c3b-2c9cd5e95937",
+    "Arn": "arn:aws:connect:us-east-1:600627335446:instance/45017c34-af28-4976-9d04-ca6c9cad18ac/queue/7c71ac10-0cf9-4f4e-8c3b-2c9cd5e95937",
+    "Name": "BasicQueue",
+    "QueueType": "STANDARD",
+    "LastModifiedTime": "2026-10-22 12:49:20.416000-05:00",
+    "LastModifiedRegion": "us-east-1"
+  }
+]

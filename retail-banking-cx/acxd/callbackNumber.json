@@ -1,0 +1,13 @@
+{
+  "key": "callbackNumber",
+  "schema": {
+    "type": "string",
+    "isSensitive": false,
+    "title": "",
+    "description": "Best callback number for this caller. Populated inbound by Amazon Connect Customer from the contact attributes, or captured in the flow with the built-in NLX.PhoneNumber slot when the contact carries no number. A fraud call is the one an agent most needs to be able to ring back."
+  },
+  "disallowExternalModification": false,
+  "tags": [],
+  "path": "",
+  "type": "text"
+}

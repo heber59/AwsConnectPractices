@@ -1,0 +1,27 @@
+{
+  "dataRequestId": "unlockCard",
+  "webhook": {
+    "version": "v3",
+    "sendContext": true,
+    "implementation": "external",
+    "method": "POST",
+    "environments": {
+      "production": {
+        "url": "{API_URL_Base:NLX.Secret}/retail-banking/cards/{cardId}/unlock",
+        "headers": [
+          {
+            "key": "x-api-key",
+            "value": "{API_Key:NLX.Secret}",
+            "dynamic": false,
+            "required": false
+          }
+        ]
+      }
+    }
+  },
+  "description": "Return a locked card (CARD-0000) to active, only once the caller says it is safe. The reversible half of lockCard.",
+  "sensitive": false,
+  "streamStateModifications": true,
+  "tags": [],
+  "path": ""
+}

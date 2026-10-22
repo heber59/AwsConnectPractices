@@ -1,0 +1,13 @@
+{
+  "key": "connectCustomerName",
+  "schema": {
+    "type": "string",
+    "isSensitive": false,
+    "title": "",
+    "description": "The caller's name as Amazon Connect already knows it. Populated INBOUND from a Connect contact attribute of the exact same name, set before the Get customer input block. Requires disallowExternalModification=false ('Allow client-side updates' ON) or Connect cannot write to it."
+  },
+  "disallowExternalModification": false,
+  "tags": [],
+  "path": "",
+  "type": "text"
+}

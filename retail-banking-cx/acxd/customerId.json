@@ -1,0 +1,13 @@
+{
+  "key": "customerId",
+  "schema": {
+    "type": "string",
+    "isSensitive": false,
+    "title": "",
+    "description": "Verified customer ID in the shape of CUST-00000. Written by the Entry flow from the enumerated slot, which is what canonicalises the casing before it ever reaches a tool."
+  },
+  "disallowExternalModification": true,
+  "tags": [],
+  "path": "",
+  "type": "text"
+}

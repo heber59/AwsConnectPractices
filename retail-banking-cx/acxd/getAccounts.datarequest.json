@@ -1,0 +1,27 @@
+{
+  "dataRequestId": "getAccounts",
+  "webhook": {
+    "version": "v3",
+    "sendContext": true,
+    "implementation": "external",
+    "method": "GET",
+    "environments": {
+      "production": {
+        "url": "{API_URL_Base:NLX.Secret}/retail-banking/accounts?customerId={customerId}",
+        "headers": [
+          {
+            "key": "x-api-key",
+            "value": "{API_Key:NLX.Secret}",
+            "dynamic": false,
+            "required": false
+          }
+        ]
+      }
+    }
+  },
+  "description": "List the caller's accounts with their balances",
+  "sensitive": false,
+  "streamStateModifications": false,
+  "tags": [],
+  "path": ""
+}
