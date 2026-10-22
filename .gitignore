@@ -1,1 +1,13 @@
-config/*.env
+# Local credentials and generated outputs, for every practice
+.env
+.env.*
+*.env
+*.env.*
+!*.env.example
+!.env.example
+
+# Generated artifacts and isolated local tooling
+.build/
+node_modules/
+__pycache__/
+*.py[cod]
