@@ -1,0 +1,38 @@
+{
+  "slotTypeId": "customerId",
+  "values": [
+    {
+      "valueId": "custRbAnyBankValue001a",
+      "translated": false,
+      "value": "CUST-12345",
+      "synonyms": [],
+      "skipTranslation": false
+    },
+    {
+      "valueId": "custRbAnyBankValue002b",
+      "translated": false,
+      "value": "CUST-67890",
+      "synonyms": [],
+      "skipTranslation": false
+    },
+    {
+      "valueId": "custRbAnyBankValue003c",
+      "translated": false,
+      "value": "CUST-11111",
+      "synonyms": [],
+      "skipTranslation": false
+    }
+  ],
+  "sensitive": false,
+  "mainLanguageCode": "en-US",
+  "languageCodes": [
+    "en-US"
+  ],
+  "description": "Valid AnyBank customer identifiers. The enumeration is the validation and canonicalises casing, so cust-12345 resolves to CUST-12345.",
+  "metadata": {
+    "tags": []
+  },
+  "createdAt": "2026-10-26T17:45:21.310Z",
+  "updatedAt": "2026-10-26T17:45:21.310Z",
+  "updatedBy": "cliCodex"
+}

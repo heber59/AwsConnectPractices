@@ -1,0 +1,16 @@
+[
+  {
+    "buildId": "625f4049-d870-4dc4-a038-a8dd12554c04",
+    "applicationId": "de07af04-6844-4149-a98d-d5b705e418cd",
+    "status": "BUILT",
+    "version": "v0.1.0",
+    "description": "Restored AnyBank Entry and Main",
+    "languageSettings": [
+      {
+        "languageCode": "en-US"
+      }
+    ],
+    "createdAt": "2026-10-26T17:46:33.501Z",
+    "updatedAt": "2026-10-26T17:46:34.261Z"
+  }
+]

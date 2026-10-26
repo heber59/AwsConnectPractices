@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "da86aba7-390c-421d-9a1e-225891874b41",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/da86aba7-390c-421d-9a1e-225891874b41",
+    "Name": "Default agent hold",
+    "ContactFlowType": "AGENT_HOLD",
+    "ContactFlowState": "ACTIVE",
+    "ContactFlowStatus": "PUBLISHED"
+  },
+  {
+    "Id": "b6deae14-b909-46c3-8858-7d7be458dc9b",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/b6deae14-b909-46c3-8858-7d7be458dc9b",
+    "Name": "Default agent transfer",
+    "ContactFlowType": "AGENT_TRANSFER",
+    "ContactFlowState": "ACTIVE",
+    "ContactFlowStatus": "PUBLISHED"
+  },
+  {
+    "Id": "3d285a46-839c-4814-9666-69fbd6c9704c",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/3d285a46-839c-4814-9666-69fbd6c9704c",
+    "Name": "Default agent whisper",
+    "ContactFlowType": "AGENT_WHISPER",
+    "ContactFlowState": "ACTIVE",
+    "ContactFlowStatus": "PUBLISHED"
+  },
+  {
+    "Id": "da70ffde-42ff-4ecd-8e14-552a0a370809",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/da70ffde-42ff-4ecd-8e14-552a0a370809",
+    "Name": "AnyBank - entrada",
+    "ContactFlowType": "CONTACT_FLOW",
+    "ContactFlowState": "ACTIVE",
+    "ContactFlowStatus": "PUBLISHED"
+  },
+  {
+    "Id": "2f555db0-ee67-414f-99f2-637a8de8b4fb",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/2f555db0-ee67-414f-99f2-637a8de8b4fb",
+    "Name": "AnyBank-ACXD-Prueba",
+    "ContactFlowType": "CONTACT_FLOW",
+    "ContactFlowState": "ACTIVE",
+    "ContactFlowStatus": "PUBLISHED"
+  },
+  {
+    "Id": "6b895eb5-42ae-477f-8d6c-0e8d3ba7160e",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/6b895eb5-42ae-477f-8d6c-0e8d3ba7160e",
+    "Name": "Default customer hold",
+    "ContactFlowType": "CUSTOMER_HOLD",
+    "ContactFlowState": "ACTIVE",
+    "ContactFlowStatus": "PUBLISHED"
+  },
+  {
+    "Id": "3066def3-318a-4551-8f23-01d04f127d25",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/3066def3-318a-4551-8f23-01d04f127d25",
+    "Name": "Default customer queue",
+    "ContactFlowType": "CUSTOMER_QUEUE",
+    "ContactFlowState": "ACTIVE",
+    "ContactFlowStatus": "PUBLISHED"
+  },
+  {
+    "Id": "0c512729-a45a-490d-840e-6807f2087171",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/0c512729-a45a-490d-840e-6807f2087171",
+    "Name": "Default customer whisper",
+    "ContactFlowType": "CUSTOMER_WHISPER",
+    "ContactFlowState": "ACTIVE",
+    "ContactFlowStatus": "PUBLISHED"
+  },
+  {
+    "Id": "f55d86fc-3a7d-4c60-aa09-f11dc13716cd",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/f55d86fc-3a7d-4c60-aa09-f11dc13716cd",
+    "Name": "Default outbound",
+    "ContactFlowType": "OUTBOUND_WHISPER",
+    "ContactFlowState": "ACTIVE",
+    "ContactFlowStatus": "PUBLISHED"
+  },
+  {
+    "Id": "e1d4a4c8-9e12-45fd-9d90-e11b787f0ffd",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/e1d4a4c8-9e12-45fd-9d90-e11b787f0ffd",
+    "Name": "Default queue transfer",
+    "ContactFlowType": "QUEUE_TRANSFER",
+    "ContactFlowState": "ACTIVE",
+    "ContactFlowStatus": "PUBLISHED"
+  }
+]

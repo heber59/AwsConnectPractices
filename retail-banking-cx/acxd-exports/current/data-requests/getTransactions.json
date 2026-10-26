@@ -1,0 +1,40 @@
+{
+  "dataRequestId": "getTransactions",
+  "type": "object",
+  "webhook": {
+    "method": "GET",
+    "sendContext": true,
+    "environments": {
+      "production": {
+        "headers": [
+          {
+            "dynamic": false,
+            "value": "{API_Key:NLX.Secret}",
+            "key": "x-api-key",
+            "required": false
+          }
+        ],
+        "url": "{API_URL_Base:NLX.Secret}/retail-banking/transactions?accountId={accountId}"
+      }
+    },
+    "implementation": "external"
+  },
+  "requestSchema": {
+    "type": "object",
+    "properties": {},
+    "isSensitive": false
+  },
+  "responseSchema": {
+    "type": "object",
+    "properties": {},
+    "isSensitive": false
+  },
+  "sensitive": false,
+  "description": "Posted transactions for one account (accountId CHK-000 or SAV-000, from getAccounts). There is no date filter: the whole history comes back.",
+  "metadata": {
+    "tags": []
+  },
+  "createdAt": "2026-10-26T17:45:34.265Z",
+  "updatedAt": "2026-10-26T17:45:34.265Z",
+  "updatedBy": "cliCodex"
+}

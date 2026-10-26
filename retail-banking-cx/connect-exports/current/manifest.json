@@ -1,0 +1,108 @@
+{
+  "exportedAt": "20261026T203108215357Z",
+  "practice": "retail-banking-cx",
+  "region": "us-east-1",
+  "accountId": "038462758107",
+  "instanceId": "e9850d77-8227-4fdb-ad6c-c98a6d1e3db7",
+  "counts": {
+    "flows": 10,
+    "flow-modules": 0,
+    "hours-of-operation": 1,
+    "queues": 3,
+    "routing-profiles": 3,
+    "quick-connects": 0,
+    "prompts": 7,
+    "lambda-functions": 0,
+    "lex-bots": 0,
+    "integrations": 0,
+    "instance-attributes": 19
+  },
+  "errors": [],
+  "scope": "Curated AnyBank practice definitions with default flow dependencies; not a full instance export.",
+  "sourceCounts": {
+    "flows": 22,
+    "flow-modules": 0,
+    "hours-of-operation": 1,
+    "queues": 4,
+    "routing-profiles": 4,
+    "quick-connects": 0,
+    "prompts": 7,
+    "lambda-functions": 0,
+    "lex-bots": 0,
+    "integrations": 0,
+    "instance-attributes": 19
+  },
+  "excludedResources": [
+    {
+      "type": "flows",
+      "name": "Sample recording behavior",
+      "id": "e88f7fee-3eef-488e-ae2e-701410e793f4"
+    },
+    {
+      "type": "flows",
+      "name": "Sample Lambda integration",
+      "id": "c3380446-e8eb-452f-9e95-c8a69877abcc"
+    },
+    {
+      "type": "flows",
+      "name": "Sample AB test",
+      "id": "836504b5-17e0-4658-9ff2-b7a5a1fe238e"
+    },
+    {
+      "type": "flows",
+      "name": "Sample after contact work flow",
+      "id": "20be0878-95c1-4ee8-a99f-c9fcf57a0ff6"
+    },
+    {
+      "type": "flows",
+      "name": "Sample queue customer",
+      "id": "840cdeb2-791b-4214-a4ce-31f8da1c4a8c"
+    },
+    {
+      "type": "flows",
+      "name": "Sample secure input with no agent",
+      "id": "11924df0-ab23-4db1-816a-4e30a3719706"
+    },
+    {
+      "type": "flows",
+      "name": "Sample queue configurations flow",
+      "id": "5c3e55f1-dde7-4252-b161-fea68dd04a40"
+    },
+    {
+      "type": "flows",
+      "name": "Sample note for screenpop",
+      "id": "3962e8ca-07b7-4d31-88f3-2907e143a5a5"
+    },
+    {
+      "type": "flows",
+      "name": "Sample inbound flow (first contact experience)",
+      "id": "b06b8779-0574-4475-8db6-e08cbec71fae"
+    },
+    {
+      "type": "flows",
+      "name": "Sample disconnect flow",
+      "id": "6eadec9b-2ce3-4bbb-99af-3c9976fec178"
+    },
+    {
+      "type": "flows",
+      "name": "Sample interruptible queue flow with callback",
+      "id": "2e23d065-c6cf-4752-9ade-bbe9ca1967b4"
+    },
+    {
+      "type": "flows",
+      "name": "Sample secure input with agent",
+      "id": "df6aca64-2324-4991-a069-c73d30be4346"
+    },
+    {
+      "type": "queues",
+      "name": "BasicQueue",
+      "id": "0fde798d-f6a0-4740-b442-af6a25267d97"
+    },
+    {
+      "type": "routing-profiles",
+      "name": "Basic Routing Profile",
+      "id": "f71451a0-9df1-4c19-8f1d-f9b9a993bd30"
+    }
+  ],
+  "curationNote": "Sample flows, BasicQueue and Basic Routing Profile were excluded from this repository snapshot only. Live AWS resources were not changed."
+}

@@ -1,0 +1,68 @@
+{
+  "applicationId": "06179fa1-43a9-459d-b9d2-2b70fd59888c",
+  "name": "Workshop",
+  "flows": [
+    {
+      "flowId": "Entry"
+    },
+    {
+      "flowId": "Main"
+    }
+  ],
+  "settings": {
+    "languageCodes": [
+      "en-US"
+    ],
+    "repeatOnIncomprehension": false,
+    "thresholds": {
+      "nlpLowConfidence": 20,
+      "incomprehensionCount": 2,
+      "nlpHighConfidence": 80
+    },
+    "conversationTTL": 5,
+    "guardrails": [],
+    "languageSettings": [
+      {
+        "languageCode": "en-US"
+      }
+    ],
+    "languageCode": "en-US",
+    "clusters": {
+      "phraseThreshold": {
+        "count": 100
+      },
+      "enabled": false,
+      "retention": {
+        "count": 30,
+        "resolution": "DAY"
+      },
+      "frequency": {
+        "count": 1,
+        "resolution": "MONTH"
+      }
+    },
+    "lifecycleHooks": {},
+    "defaultFlows": {
+      "ACXD.Fallback": {
+        "flowId": "Main"
+      },
+      "ACXD.Unknown": {
+        "flowId": "Main"
+      },
+      "ACXD.Welcome": {
+        "flowId": "Entry"
+      }
+    }
+  },
+  "metadata": {
+    "tags": []
+  },
+  "deploymentSettings": {
+    "oneClickDeployEnabled": false,
+    "environment": "production",
+    "contextVariables": []
+  },
+  "createdAt": "2026-10-26T17:45:38.360Z",
+  "updatedAt": "2026-10-26T17:45:38.360Z",
+  "updatedBy": "cliCodex"
+}

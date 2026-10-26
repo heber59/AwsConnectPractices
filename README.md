@@ -67,6 +67,8 @@ python scripts/export-connect.py --practice retail-banking-cx
 
 The export reads the entire configured instance and saves a new timestamped directory inside that practice's `connect-exports/`. It does not filter resources by practice. Inspect `manifest.json`: partial exports retain saved files and exit unsuccessfully. Optional `--output` must point inside the selected practice.
 
+The repository versions one current practice backup per export folder. Full timestamped exports stay local and are ignored by Git; older committed snapshots remain in Git history. See the [voice practice guide](retail-banking-cx/VOICE-PRACTICE.md) for the curated scope.
+
 Snapshots preserve definitions, not a full environment backup. Generic restoration and ID/ARN remapping are not implemented. Recordings, contact history, users, prompt audio, external Lambda code, and complete Lex definitions need separate preservation. The Retail Banking deployment scripts recreate their own demo resources; they do not restore an arbitrary snapshot. An automated pipeline is not implemented.
 
 ## Preserve ACXD definitions

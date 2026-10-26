@@ -1,5 +1,8 @@
 # Retail Banking CX
 
+> Current voice exercise (October 26, 2026): see [AnyBank voice routing practice](VOICE-PRACTICE.md) for the new sandbox, ACXD application, three specialist queues, agent assignments, call testing, and current snapshots. The backend deployment details below describe the earlier sandbox and must be revalidated after renewal.
+
+
 Learn how **AnyBank's River assistant**, a Connect flow, a backend lookup, a queue, and a human agent work together. Use one fictional customer throughout the exercise.
 
 **Verified:** balance and card lookup flows display mock data and route to the correct queues. River asks for a customer ID, accepts a valid ID, and can hand off to a human. **Pending:** River's balance request transfers to a human because the Main flow's AI node has no tools attached. The two backend Secrets are now configured; attach the five read tools and publish the ACXD application before retesting. Browser-based agent acceptance is still a manual test.

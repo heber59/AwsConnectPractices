@@ -1,0 +1,63 @@
+{
+  "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/6b895eb5-42ae-477f-8d6c-0e8d3ba7160e",
+  "Id": "6b895eb5-42ae-477f-8d6c-0e8d3ba7160e",
+  "Name": "Default customer hold",
+  "Type": "CUSTOMER_HOLD",
+  "State": "ACTIVE",
+  "Status": "PUBLISHED",
+  "Description": "Default audio the customer hears while on hold.",
+  "Content": {
+    "Version": "2019-10-30",
+    "StartAction": "8f409795-d5e5-4d68-99e0-720896b1393a",
+    "Metadata": {
+      "entryPointPosition": {
+        "x": 75,
+        "y": 20
+      },
+      "snapToGrid": false,
+      "ActionMetadata": {
+        "8f409795-d5e5-4d68-99e0-720896b1393a": {
+          "position": {
+            "x": 288,
+            "y": 58
+          },
+          "audio": [
+            {
+              "type": "Prompt",
+              "prompt": {
+                "id": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/prompt/2b874135-294e-41ee-982d-cb86ed8e370b",
+                "text": "Music_Jazz_MyTimetoFly_Inst.wav"
+              },
+              "$$hashKey": "01G"
+            }
+          ],
+          "timeoutUnit": {
+            "display": "Minutes",
+            "value": "min"
+          }
+        }
+      }
+    },
+    "Actions": [
+      {
+        "Identifier": "8f409795-d5e5-4d68-99e0-720896b1393a",
+        "Parameters": {
+          "Messages": [
+            {
+              "PromptId": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/prompt/2b874135-294e-41ee-982d-cb86ed8e370b"
+            }
+          ]
+        },
+        "Transitions": {
+          "Errors": [],
+          "Conditions": []
+        },
+        "Type": "MessageParticipantIteratively"
+      }
+    ]
+  },
+  "Tags": {},
+  "FlowContentSha256": "e6f3141bcc8549ca79b8d3e1152db5df9532833d7eb304c035cae00e959cf012",
+  "LastModifiedTime": "2026-10-26 11:15:23.259000-05:00",
+  "LastModifiedRegion": "us-east-1"
+}

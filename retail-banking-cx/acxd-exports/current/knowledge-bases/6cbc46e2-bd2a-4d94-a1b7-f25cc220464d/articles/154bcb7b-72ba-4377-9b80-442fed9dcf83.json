@@ -1,0 +1,18 @@
+{
+  "knowledgeBaseId": "6cbc46e2-bd2a-4d94-a1b7-f25cc220464d",
+  "articleId": "154bcb7b-72ba-4377-9b80-442fed9dcf83",
+  "question": {
+    "messageId": "a1b11008-0008-4a08-9a08-aa0800000008",
+    "text": "How do I reach a person, and when are you open?"
+  },
+  "responses": [
+    {
+      "type": "text",
+      "body": "General support is on the phone from seven in the morning to ten in the evening Eastern time, seven days a week. Two lines never close: the fraud and lost-card line, which is staffed twenty-four hours a day every day of the year, and the automated service in the app and on the phone, which can check balances, move money between your own accounts and lock a card at any hour. Branches are open nine to five on weekdays and nine to one on Saturdays, closed Sundays and public holidays, and an appointment is worth making for anything to do with a loan, a mortgage or an account opening. Some things need a person by design rather than by opening hours, including anything about a loan or a mortgage, opening or closing an account, raising a limit, a payment sent to the wrong payee, a wire that has already gone, and any question about what you should do with your money rather than what your account currently says.",
+      "messageId": "a1b11008-0008-4a08-9a08-bb0800000008"
+    }
+  ],
+  "createdAt": "2026-10-26T17:45:31.542Z",
+  "updatedAt": "2026-10-26T17:45:31.542Z",
+  "updatedBy": "cliCodex"
+}

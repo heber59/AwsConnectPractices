@@ -1,0 +1,86 @@
+[
+  {
+    "name": "handoffSummary",
+    "type": "text",
+    "schema": {
+      "description": "A short note for the person who picks up, written by the Agent handoff summary node from the conversation transcript. That node writes it into a flow-local, which does not leave the flow; a state modification on the Escalate node copies it into this Context Variable, and that is what carries it across to Amazon Connect Customer. Part 4 has the participant add the state modification, so this variable is empty until they do.",
+      "isSensitive": false,
+      "type": "string"
+    },
+    "disallowExternalModification": true,
+    "metadata": {},
+    "createdAt": "2026-10-26T17:45:23.183Z",
+    "updatedAt": "2026-10-26T17:45:23.183Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "name": "callbackNumber",
+    "type": "text",
+    "schema": {
+      "description": "Best callback number for this caller. Populated inbound by Amazon Connect Customer from the contact attributes, or captured in the flow with the built-in NLX.PhoneNumber slot when the contact carries no number. A fraud call is the one an agent most needs to be able to ring back.",
+      "isSensitive": false,
+      "type": "string"
+    },
+    "disallowExternalModification": false,
+    "metadata": {},
+    "createdAt": "2026-10-26T17:45:23.710Z",
+    "updatedAt": "2026-10-26T17:45:23.710Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "name": "connectCustomerName",
+    "type": "text",
+    "schema": {
+      "description": "The caller's name as Amazon Connect already knows it. Populated INBOUND from a Connect contact attribute of the exact same name, set before the Get customer input block. Requires disallowExternalModification=false ('Allow client-side updates' ON) or Connect cannot write to it.",
+      "isSensitive": false,
+      "type": "string"
+    },
+    "disallowExternalModification": false,
+    "metadata": {},
+    "createdAt": "2026-10-26T17:45:24.095Z",
+    "updatedAt": "2026-10-26T17:45:24.095Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "name": "customerId",
+    "type": "text",
+    "schema": {
+      "description": "Verified customer ID in the shape of CUST-00000. Written by the Entry flow from the enumerated slot, which is what canonicalises the casing before it ever reaches a tool.",
+      "isSensitive": false,
+      "type": "string"
+    },
+    "disallowExternalModification": true,
+    "metadata": {},
+    "createdAt": "2026-10-26T17:45:24.420Z",
+    "updatedAt": "2026-10-26T17:45:24.420Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "name": "routingDepartment",
+    "type": "text",
+    "schema": {
+      "description": "routing",
+      "isSensitive": false,
+      "type": "string"
+    },
+    "disallowExternalModification": true,
+    "metadata": {},
+    "createdAt": "2026-10-26T19:43:00.995Z",
+    "updatedAt": "2026-10-26T19:43:10.891Z",
+    "updatedBy": "hesan"
+  },
+  {
+    "name": "customerTier",
+    "type": "text",
+    "schema": {
+      "description": "vip-standard",
+      "isSensitive": false,
+      "type": "string"
+    },
+    "disallowExternalModification": true,
+    "metadata": {},
+    "createdAt": "2026-10-26T19:50:20.010Z",
+    "updatedAt": "2026-10-26T19:50:30.163Z",
+    "updatedBy": "hesan"
+  }
+]

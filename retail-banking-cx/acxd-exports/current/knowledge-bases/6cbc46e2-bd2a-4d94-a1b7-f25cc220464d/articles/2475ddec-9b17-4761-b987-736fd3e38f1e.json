@@ -1,0 +1,18 @@
+{
+  "knowledgeBaseId": "6cbc46e2-bd2a-4d94-a1b7-f25cc220464d",
+  "articleId": "2475ddec-9b17-4761-b987-736fd3e38f1e",
+  "question": {
+    "messageId": "a1b11007-0007-4a07-9a07-aa0700000007",
+    "text": "When does a bill payment actually reach the payee, and can I cancel one?"
+  },
+  "responses": [
+    {
+      "type": "text",
+      "body": "A payment submitted before eight in the evening Eastern time on a business day is sent that day. How quickly it lands depends on the payee: most large ones are paid electronically and post in one to two business days, and a smaller payee we have to pay by cheque takes four to five. That is why the guidance is to schedule a payment at least three business days before its due date rather than on the day. The money leaves your account on the date the payment is scheduled for, not on the day the payee posts it. A scheduled payment can be cancelled any time before its send date, at no charge, and a repeating payment can be cancelled or changed up to the day before the next one goes. Once a payment has been sent it cannot be cancelled; if it went to the wrong payee or for the wrong amount at that point, it becomes a claim rather than a cancellation, and that needs a person.",
+      "messageId": "a1b11007-0007-4a07-9a07-bb0700000007"
+    }
+  ],
+  "createdAt": "2026-10-26T17:45:31.224Z",
+  "updatedAt": "2026-10-26T17:45:31.224Z",
+  "updatedBy": "cliCodex"
+}

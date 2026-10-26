@@ -1,0 +1,15 @@
+[
+  {
+    "deploymentId": "d4262219-b98b-4316-9c24-2c9cf7ef6826",
+    "applicationId": "aff3c233-12cc-4ce9-9e87-0afa3259f022",
+    "buildId": "eadadc53-f7f9-4256-bac9-7714728849b2",
+    "description": "Test deployment",
+    "deploymentStatus": "deployed",
+    "environment": "production",
+    "deploymentAlias": "PpZwmvuFicAbW2c39wtxS",
+    "contextVariables": [],
+    "createdAt": "2026-10-26T18:53:02.438Z",
+    "updatedAt": "2026-10-26T20:25:27.181Z",
+    "updatedBy": "hesan"
+  }
+]

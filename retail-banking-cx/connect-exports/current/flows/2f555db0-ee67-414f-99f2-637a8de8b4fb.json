@@ -1,0 +1,476 @@
+{
+  "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/2f555db0-ee67-414f-99f2-637a8de8b4fb",
+  "Id": "2f555db0-ee67-414f-99f2-637a8de8b4fb",
+  "Name": "AnyBank-ACXD-Prueba",
+  "Type": "CONTACT_FLOW",
+  "State": "ACTIVE",
+  "Status": "PUBLISHED",
+  "Description": "ACXD connectivity test; banking backend and agent queues pending",
+  "Content": {
+    "Version": "2019-10-30",
+    "StartAction": "b8a4a209-d4f7-444d-ab93-1597c2ee64db",
+    "Metadata": {
+      "entryPointPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "ActionMetadata": {
+        "disconnect": {
+          "position": {
+            "x": 592,
+            "y": 545.6
+          },
+          "isFriendlyName": true
+        },
+        "goodbye": {
+          "position": {
+            "x": 484,
+            "y": 207.2
+          },
+          "isFriendlyName": true
+        },
+        "error": {
+          "position": {
+            "x": -21.6,
+            "y": 295.2
+          },
+          "isFriendlyName": true
+        },
+        "b8a4a209-d4f7-444d-ab93-1597c2ee64db": {
+          "position": {
+            "x": -63.2,
+            "y": 80.8
+          }
+        },
+        "acxd": {
+          "position": {
+            "x": 145.6,
+            "y": 1.6
+          },
+          "isFriendlyName": true,
+          "parameters": {
+            "AgentConfiguration": {
+              "WorkspaceId": {
+                "displayName": "prueba",
+                "useDropdown": "true"
+              },
+              "ApplicationId": {
+                "displayName": "AnyBank -Welcome"
+              },
+              "Alias": {
+                "displayName": "Production"
+              }
+            }
+          }
+        },
+        "cards": {
+          "position": {
+            "x": 1097.6,
+            "y": -200
+          },
+          "isFriendlyName": true
+        },
+        "accounts": {
+          "position": {
+            "x": 1195.2,
+            "y": 36
+          },
+          "isFriendlyName": true
+        },
+        "50ee9db0-dac4-4dbc-8cab-212ff878b776": {
+          "position": {
+            "x": 333.6,
+            "y": -8.8
+          },
+          "parameters": {
+            "Attributes": {
+              "routingDepartment": {
+                "useDynamic": true
+              }
+            }
+          },
+          "dynamicParams": [
+            "routingDepartment"
+          ]
+        },
+        "AnyBank-Cards": {
+          "position": {
+            "x": 855.2,
+            "y": -207.2
+          },
+          "isFriendlyName": true,
+          "parameters": {
+            "QueueId": {
+              "displayName": "AnyBank-Cards"
+            }
+          },
+          "queue": {
+            "text": "AnyBank-Cards"
+          }
+        },
+        "AnyBank-Accounts": {
+          "position": {
+            "x": 909.6,
+            "y": -8
+          },
+          "isFriendlyName": true,
+          "parameters": {
+            "QueueId": {
+              "displayName": "AnyBank-Accounts"
+            }
+          },
+          "queue": {
+            "text": "AnyBank-Accounts"
+          }
+        },
+        "f2d3136c-3e73-425f-b4c3-41a42a9a2354": {
+          "position": {
+            "x": 1323.2,
+            "y": 252.8
+          }
+        },
+        "error routing": {
+          "position": {
+            "x": 755.2,
+            "y": 279.2
+          },
+          "isFriendlyName": true
+        },
+        "User defined": {
+          "position": {
+            "x": 573.6,
+            "y": -107.2
+          },
+          "isFriendlyName": true,
+          "conditionMetadata": [
+            {
+              "id": "3fd1bf59-e31f-4acc-9f6c-e45501af52dd",
+              "operator": {
+                "name": "Equals",
+                "value": "Equals",
+                "shortDisplay": "="
+              },
+              "value": "card"
+            },
+            {
+              "id": "6c9c9fe1-3d50-4057-8a7b-9a979abe742a",
+              "operator": {
+                "name": "Equals",
+                "value": "Equals",
+                "shortDisplay": "="
+              },
+              "value": "account"
+            },
+            {
+              "id": "5b9dbd71-ad97-4a32-842e-8c0c9193fdcc",
+              "operator": {
+                "name": "Equals",
+                "value": "Equals",
+                "shortDisplay": "="
+              },
+              "value": "transfer"
+            }
+          ]
+        },
+        "AnyBank-Transfers": {
+          "position": {
+            "x": 995.2,
+            "y": 238.4
+          },
+          "isFriendlyName": true,
+          "parameters": {
+            "QueueId": {
+              "displayName": "AnyBank-Transfers"
+            }
+          },
+          "queue": {
+            "text": "AnyBank-Transfers"
+          }
+        }
+      },
+      "Annotations": []
+    },
+    "Actions": [
+      {
+        "Parameters": {},
+        "Identifier": "disconnect",
+        "Type": "DisconnectParticipant",
+        "Transitions": {}
+      },
+      {
+        "Parameters": {
+          "Text": "Thank you for contacting AnyBank. Goodbye."
+        },
+        "Identifier": "goodbye",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "disconnect",
+          "Errors": [
+            {
+              "NextAction": "disconnect",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "Text": "We could not connect to the AI assistant. Please try again later."
+        },
+        "Identifier": "error",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "disconnect",
+          "Errors": [
+            {
+              "NextAction": "disconnect",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "FlowLoggingBehavior": "Enabled"
+        },
+        "Identifier": "b8a4a209-d4f7-444d-ab93-1597c2ee64db",
+        "Type": "UpdateFlowLoggingBehavior",
+        "Transitions": {
+          "NextAction": "acxd"
+        }
+      },
+      {
+        "Identifier": "acxd",
+        "Type": "ConnectParticipantWithAgenticCX",
+        "Parameters": {
+          "AgentConfiguration": {
+            "WorkspaceId": "3374f5de-9de7-4273-8fe5-96cc2984acfb",
+            "ApplicationId": "aff3c233-12cc-4ce9-9e87-0afa3259f022",
+            "Alias": "PpZwmvuFicAbW2c39wtxS"
+          },
+          "SpeechRecognitionConfiguration": {
+            "SpeechRecognitionEngine": "AMAZON_AGENTIC_VOICE"
+          },
+          "AudioFillerConfiguration": {
+            "Enabled": false
+          }
+        },
+        "Transitions": {
+          "NextAction": "error",
+          "Errors": [
+            {
+              "NextAction": "error",
+              "ErrorType": "NoMatchingError"
+            },
+            {
+              "NextAction": "error",
+              "ErrorType": "NoMatchingCondition"
+            },
+            {
+              "NextAction": "goodbye",
+              "ErrorType": "InputTimeLimitExceeded"
+            }
+          ],
+          "Conditions": [
+            {
+              "NextAction": "50ee9db0-dac4-4dbc-8cab-212ff878b776",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "Escalation"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {},
+        "Identifier": "cards",
+        "Type": "TransferContactToQueue",
+        "Transitions": {
+          "NextAction": "error routing",
+          "Errors": [
+            {
+              "NextAction": "error routing",
+              "ErrorType": "QueueAtCapacity"
+            },
+            {
+              "NextAction": "error routing",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {},
+        "Identifier": "accounts",
+        "Type": "TransferContactToQueue",
+        "Transitions": {
+          "NextAction": "error routing",
+          "Errors": [
+            {
+              "NextAction": "error routing",
+              "ErrorType": "QueueAtCapacity"
+            },
+            {
+              "NextAction": "error routing",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "Attributes": {
+            "routingDepartment": "$.AgenticCX.ContextVariables.routingDepartment"
+          },
+          "TargetContact": "Current"
+        },
+        "Identifier": "50ee9db0-dac4-4dbc-8cab-212ff878b776",
+        "Type": "UpdateContactAttributes",
+        "Transitions": {
+          "NextAction": "User defined",
+          "Errors": [
+            {
+              "NextAction": "disconnect",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "QueueId": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/493de3e1-8b28-48ef-aeb4-ebbd7f9a3f56"
+        },
+        "Identifier": "AnyBank-Cards",
+        "Type": "UpdateContactTargetQueue",
+        "Transitions": {
+          "NextAction": "cards",
+          "Errors": [
+            {
+              "NextAction": "error routing",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "QueueId": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/1eda7698-bd06-4aa5-89d2-d98dbce7782c"
+        },
+        "Identifier": "AnyBank-Accounts",
+        "Type": "UpdateContactTargetQueue",
+        "Transitions": {
+          "NextAction": "accounts",
+          "Errors": [
+            {
+              "NextAction": "error routing",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {},
+        "Identifier": "f2d3136c-3e73-425f-b4c3-41a42a9a2354",
+        "Type": "TransferContactToQueue",
+        "Transitions": {
+          "NextAction": "error routing",
+          "Errors": [
+            {
+              "NextAction": "error routing",
+              "ErrorType": "QueueAtCapacity"
+            },
+            {
+              "NextAction": "error routing",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "SkipWhenDTMFBufferEnabled": "false",
+          "Text": "Sorry, we couldn\u2019t identify the right team for your request. Please try again."
+        },
+        "Identifier": "error routing",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "disconnect",
+          "Errors": [
+            {
+              "NextAction": "disconnect",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ComparisonValue": "$.Attributes.routingDepartment"
+        },
+        "Identifier": "User defined",
+        "Type": "Compare",
+        "Transitions": {
+          "NextAction": "error routing",
+          "Conditions": [
+            {
+              "NextAction": "AnyBank-Cards",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "card"
+                ]
+              }
+            },
+            {
+              "NextAction": "AnyBank-Accounts",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "account"
+                ]
+              }
+            },
+            {
+              "NextAction": "AnyBank-Transfers",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "transfer"
+                ]
+              }
+            }
+          ],
+          "Errors": [
+            {
+              "NextAction": "error routing",
+              "ErrorType": "NoMatchingCondition"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "QueueId": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/dbb86c2b-2677-4277-b2ad-6a99be74bd1a"
+        },
+        "Identifier": "AnyBank-Transfers",
+        "Type": "UpdateContactTargetQueue",
+        "Transitions": {
+          "NextAction": "f2d3136c-3e73-425f-b4c3-41a42a9a2354",
+          "Errors": [
+            {
+              "NextAction": "error routing",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Tags": {},
+  "FlowContentSha256": "1908e73cbd23b5640d237a952afc04d13744ce2868b1259f76c3576365c733b9",
+  "LastModifiedTime": "2026-10-26 15:25:09.879000-05:00",
+  "LastModifiedRegion": "us-east-1"
+}

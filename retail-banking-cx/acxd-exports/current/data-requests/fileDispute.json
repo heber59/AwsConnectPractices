@@ -1,0 +1,40 @@
+{
+  "dataRequestId": "fileDispute",
+  "type": "object",
+  "webhook": {
+    "method": "POST",
+    "sendContext": true,
+    "environments": {
+      "production": {
+        "headers": [
+          {
+            "dynamic": false,
+            "value": "{API_Key:NLX.Secret}",
+            "key": "x-api-key",
+            "required": false
+          }
+        ],
+        "url": "{API_URL_Base:NLX.Secret}/retail-banking/disputes?customerId={customerId}&transactionId={transactionId}&reason={reason}&amount={amount}"
+      }
+    },
+    "implementation": "external"
+  },
+  "requestSchema": {
+    "type": "object",
+    "properties": {},
+    "isSensitive": false
+  },
+  "responseSchema": {
+    "type": "object",
+    "properties": {},
+    "isSensitive": false
+  },
+  "sensitive": false,
+  "description": "Dispute a charge (transactionId TXN-BK-0000 from getTransactions). amount is positive; reason in the caller's words. Read the merchant, amount and date back first.",
+  "metadata": {
+    "tags": []
+  },
+  "createdAt": "2026-10-26T17:45:35.905Z",
+  "updatedAt": "2026-10-26T17:45:35.905Z",
+  "updatedBy": "cliCodex"
+}
