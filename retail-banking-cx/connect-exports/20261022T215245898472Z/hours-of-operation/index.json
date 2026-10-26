@@ -1,9 +1,0 @@
-[
-  {
-    "Id": "81981125-a2c3-4db8-a37b-c3176a09352d",
-    "Arn": "arn:aws:connect:us-east-1:600627335446:instance/45017c34-af28-4976-9d04-ca6c9cad18ac/operating-hours/81981125-a2c3-4db8-a37b-c3176a09352d",
-    "Name": "Basic Hours",
-    "LastModifiedTime": "2026-10-22 12:49:20.387000-05:00",
-    "LastModifiedRegion": "us-east-1"
-  }
-]

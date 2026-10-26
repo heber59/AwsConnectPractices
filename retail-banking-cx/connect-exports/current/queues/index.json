@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1eda7698-bd06-4aa5-89d2-d98dbce7782c",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/1eda7698-bd06-4aa5-89d2-d98dbce7782c",
+    "Name": "AnyBank-Accounts",
+    "QueueType": "STANDARD",
+    "LastModifiedTime": "2026-10-26 14:10:17.741000-05:00",
+    "LastModifiedRegion": "us-east-1"
+  },
+  {
+    "Id": "493de3e1-8b28-48ef-aeb4-ebbd7f9a3f56",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/493de3e1-8b28-48ef-aeb4-ebbd7f9a3f56",
+    "Name": "AnyBank-Cards",
+    "QueueType": "STANDARD",
+    "LastModifiedTime": "2026-10-26 14:11:15.923000-05:00",
+    "LastModifiedRegion": "us-east-1"
+  },
+  {
+    "Id": "dbb86c2b-2677-4277-b2ad-6a99be74bd1a",
+    "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/dbb86c2b-2677-4277-b2ad-6a99be74bd1a",
+    "Name": "AnyBank-Transfers",
+    "QueueType": "STANDARD",
+    "LastModifiedTime": "2026-10-26 14:11:35.693000-05:00",
+    "LastModifiedRegion": "us-east-1"
+  }
+]

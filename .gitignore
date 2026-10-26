@@ -11,3 +11,7 @@
 node_modules/
 __pycache__/
 *.py[cod]
+
+# Keep full timestamped exports local; version only the curated current backup
+retail-banking-cx/connect-exports/20*/
+retail-banking-cx/acxd-exports/20*/

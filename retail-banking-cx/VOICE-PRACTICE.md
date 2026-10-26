@@ -83,13 +83,19 @@ Inspect the block immediately before `error routing`: attribute comparison, work
 
 ## Preserved snapshots
 
-- [Connect snapshot](connect-exports/20261026T203108215357Z/manifest.json): 22 flows, four queues including BasicQueue, four routing profiles including the default, one schedule, and supported instance definitions. No export errors.
-- [ACXD snapshot](acxd-exports/20261026T203028061526Z/manifest.json): three applications, three flows, eleven Data requests, one slot type, five guardrails, one knowledge base with eight articles, four modalities and six context variables. No export errors.
+- [Connect snapshot](connect-exports/current/manifest.json): 10 flows (AnyBank and default flow dependencies), three AnyBank queues, three specialist routing profiles, one schedule, and supported instance definitions. Source export completed without errors; sample flows and basic queue/profile definitions were intentionally excluded.
+- [ACXD snapshot](acxd-exports/current/manifest.json): three applications, three flows, eleven Data requests, one slot type, five guardrails, one knowledge base with eight articles, four modalities and six context variables. No export errors.
 - Supplemental `practice-agent-assignments.json` preserves the three demo logins and their profile/phone configuration without passwords or identity details.
 - Supplemental `practice-phone-numbers.json` records the current phone inventory. Recheck the number-to-flow association manually when rebuilding.
-- [Initial flow review](connect-exports/20261026T114022-entrada-review/flow.json) preserves the earlier welcome/DTMF version.
+- Earlier snapshots remain available in Git history at commit `4decebc`; only `current/` is retained in the working tree.
 
 Credentials, API keys, secret values, agent passwords, recordings, contact history, and CloudWatch logs are not committed. IDs and ARNs refer to the source sandbox. These snapshots require dependency remapping and recreation in a new environment; they are not a one-command restore.
+
+## Keeping backups small
+
+Update the stable `current/` directories rather than committing another timestamped copy. The export scripts still produce full timestamped local snapshots; these are ignored by Git. Validate their manifests, sanitize secrets, and check resource references before promoting changes into `current/`. The Connect current manifest explicitly records excluded sample resources. Default customer queue, hold, whisper and transfer flows are retained as baseline dependencies.
+
+Deleting historical files from this branch reduces the working tree; it does not rewrite Git history or remove live AWS resources.
 
 ## Pending work
 
