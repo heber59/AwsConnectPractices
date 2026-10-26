@@ -1,0 +1,15 @@
+[
+  {
+    "deploymentId": "5a3ed325-0ee0-4b11-a345-562ac0ac547e",
+    "applicationId": "de07af04-6844-4149-a98d-d5b705e418cd",
+    "buildId": "625f4049-d870-4dc4-a038-a8dd12554c04",
+    "description": "AnyBank restored for current Connect instance",
+    "deploymentStatus": "deployed",
+    "environment": "production",
+    "deploymentAlias": "ryZOoerl8aL3tAgvzubMM",
+    "contextVariables": [],
+    "createdAt": "2026-10-26T17:46:52.498Z",
+    "updatedAt": "2026-10-26T17:46:56.667Z",
+    "updatedBy": "cliCodex"
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/0c512729-a45a-490d-840e-6807f2087171",
+  "Id": "0c512729-a45a-490d-840e-6807f2087171",
+  "Name": "Default customer whisper",
+  "Type": "CUSTOMER_WHISPER",
+  "State": "ACTIVE",
+  "Status": "PUBLISHED",
+  "Description": "Default whisper played to the customer",
+  "Content": {
+    "Version": "2019-10-30",
+    "StartAction": "8614b74d-3946-4bb3-9808-0e47df651838",
+    "Metadata": {
+      "entryPointPosition": {
+        "x": 75,
+        "y": 20
+      },
+      "snapToGrid": false,
+      "ActionMetadata": {
+        "0da12357-da4c-4581-b21e-45b1ceee510d": {
+          "position": {
+            "x": 479,
+            "y": 181
+          }
+        },
+        "8614b74d-3946-4bb3-9808-0e47df651838": {
+          "position": {
+            "x": 239,
+            "y": 100
+          },
+          "useDynamic": false,
+          "promptName": "Beep.wav"
+        }
+      }
+    },
+    "Actions": [
+      {
+        "Identifier": "0da12357-da4c-4581-b21e-45b1ceee510d",
+        "Parameters": {},
+        "Transitions": {},
+        "Type": "EndFlowExecution"
+      },
+      {
+        "Identifier": "8614b74d-3946-4bb3-9808-0e47df651838",
+        "Parameters": {
+          "PromptId": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/prompt/61167fb1-1e47-49d7-849f-44cce19d4e80"
+        },
+        "Transitions": {
+          "NextAction": "0da12357-da4c-4581-b21e-45b1ceee510d",
+          "Errors": [],
+          "Conditions": []
+        },
+        "Type": "MessageParticipant"
+      }
+    ]
+  },
+  "Tags": {},
+  "FlowContentSha256": "dacaf9453dbd1b44714dd5ad73d28e5809e8d6e00887a623d0fb0adda89e111f",
+  "LastModifiedTime": "2026-10-26 11:15:24.763000-05:00",
+  "LastModifiedRegion": "us-east-1"
+}

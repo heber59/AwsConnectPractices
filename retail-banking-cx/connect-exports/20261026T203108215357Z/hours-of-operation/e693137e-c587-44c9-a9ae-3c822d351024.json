@@ -1,0 +1,89 @@
+{
+  "HoursOfOperationId": "e693137e-c587-44c9-a9ae-3c822d351024",
+  "HoursOfOperationArn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/operating-hours/e693137e-c587-44c9-a9ae-3c822d351024",
+  "Name": "Basic Hours",
+  "Description": "Always open hours",
+  "TimeZone": "America/New_York",
+  "Config": [
+    {
+      "Day": "WEDNESDAY",
+      "StartTime": {
+        "Hours": 0,
+        "Minutes": 0
+      },
+      "EndTime": {
+        "Hours": 0,
+        "Minutes": 0
+      }
+    },
+    {
+      "Day": "SUNDAY",
+      "StartTime": {
+        "Hours": 0,
+        "Minutes": 0
+      },
+      "EndTime": {
+        "Hours": 0,
+        "Minutes": 0
+      }
+    },
+    {
+      "Day": "SATURDAY",
+      "StartTime": {
+        "Hours": 0,
+        "Minutes": 0
+      },
+      "EndTime": {
+        "Hours": 0,
+        "Minutes": 0
+      }
+    },
+    {
+      "Day": "TUESDAY",
+      "StartTime": {
+        "Hours": 0,
+        "Minutes": 0
+      },
+      "EndTime": {
+        "Hours": 0,
+        "Minutes": 0
+      }
+    },
+    {
+      "Day": "FRIDAY",
+      "StartTime": {
+        "Hours": 0,
+        "Minutes": 0
+      },
+      "EndTime": {
+        "Hours": 0,
+        "Minutes": 0
+      }
+    },
+    {
+      "Day": "MONDAY",
+      "StartTime": {
+        "Hours": 0,
+        "Minutes": 0
+      },
+      "EndTime": {
+        "Hours": 0,
+        "Minutes": 0
+      }
+    },
+    {
+      "Day": "THURSDAY",
+      "StartTime": {
+        "Hours": 0,
+        "Minutes": 0
+      },
+      "EndTime": {
+        "Hours": 0,
+        "Minutes": 0
+      }
+    }
+  ],
+  "Tags": {},
+  "LastModifiedTime": "2026-10-26 11:15:12.571000-05:00",
+  "LastModifiedRegion": "us-east-1"
+}

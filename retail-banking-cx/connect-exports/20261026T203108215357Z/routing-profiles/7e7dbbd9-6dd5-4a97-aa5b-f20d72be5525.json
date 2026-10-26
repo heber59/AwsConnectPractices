@@ -1,0 +1,51 @@
+{
+  "InstanceId": "e9850d77-8227-4fdb-ad6c-c98a6d1e3db7",
+  "Name": "AnyBank-Accounts-Specialist",
+  "RoutingProfileArn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/routing-profile/7e7dbbd9-6dd5-4a97-aa5b-f20d72be5525",
+  "RoutingProfileId": "7e7dbbd9-6dd5-4a97-aa5b-f20d72be5525",
+  "Description": "Accounts Specialist",
+  "MediaConcurrencies": [
+    {
+      "Channel": "VOICE",
+      "Concurrency": 1,
+      "CrossChannelBehavior": {
+        "BehaviorType": "ROUTE_CURRENT_CHANNEL_ONLY"
+      }
+    }
+  ],
+  "DefaultOutboundQueueId": "1eda7698-bd06-4aa5-89d2-d98dbce7782c",
+  "Tags": {},
+  "NumberOfAssociatedQueues": 3,
+  "NumberOfAssociatedManualAssignmentQueues": 0,
+  "NumberOfAssociatedUsers": 2,
+  "AgentAvailabilityTimer": "TIME_SINCE_LAST_ACTIVITY",
+  "LastModifiedTime": "2026-10-26 14:15:23.825000-05:00",
+  "LastModifiedRegion": "us-east-1",
+  "IsDefault": false,
+  "QueueConfigs": [
+    {
+      "QueueId": "1eda7698-bd06-4aa5-89d2-d98dbce7782c",
+      "QueueArn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/1eda7698-bd06-4aa5-89d2-d98dbce7782c",
+      "QueueName": "AnyBank-Accounts",
+      "Priority": 1,
+      "Delay": 0,
+      "Channel": "VOICE"
+    },
+    {
+      "QueueId": "493de3e1-8b28-48ef-aeb4-ebbd7f9a3f56",
+      "QueueArn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/493de3e1-8b28-48ef-aeb4-ebbd7f9a3f56",
+      "QueueName": "AnyBank-Cards",
+      "Priority": 3,
+      "Delay": 30,
+      "Channel": "VOICE"
+    },
+    {
+      "QueueId": "dbb86c2b-2677-4277-b2ad-6a99be74bd1a",
+      "QueueArn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/dbb86c2b-2677-4277-b2ad-6a99be74bd1a",
+      "QueueName": "AnyBank-Transfers",
+      "Priority": 2,
+      "Delay": 30,
+      "Channel": "VOICE"
+    }
+  ]
+}

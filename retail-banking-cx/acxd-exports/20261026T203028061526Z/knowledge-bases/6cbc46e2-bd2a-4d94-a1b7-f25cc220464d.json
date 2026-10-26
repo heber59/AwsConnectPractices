@@ -1,0 +1,29 @@
+{
+  "knowledgeBaseId": "6cbc46e2-bd2a-4d94-a1b7-f25cc220464d",
+  "name": "AnyBank FAQs",
+  "type": "articles",
+  "description": "Answers general questions about everyday banking at AnyBank: fees, overdraft, disputes, transfer and wire timing, lost or stolen cards, payment limits, and bill pay. Holds no customer records.",
+  "response": {
+    "summarize": false,
+    "minConfidenceScore": 10,
+    "temperature": 1,
+    "topP": 1
+  },
+  "mainLanguageCode": "en-US",
+  "languageCodes": [
+    "en-US"
+  ],
+  "metadataSchema": {
+    "type": "object",
+    "properties": {},
+    "isSensitive": false
+  },
+  "creationStatus": "SUCCEEDED",
+  "metadata": {
+    "path": "",
+    "tags": []
+  },
+  "createdAt": "2026-10-26T17:45:27.470Z",
+  "updatedAt": "2026-10-26T17:45:27.470Z",
+  "updatedBy": "cliCodex"
+}

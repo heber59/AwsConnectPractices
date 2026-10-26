@@ -1,0 +1,18 @@
+{
+  "knowledgeBaseId": "6cbc46e2-bd2a-4d94-a1b7-f25cc220464d",
+  "articleId": "9e9bff08-36bf-4045-adfd-994a0fae44b1",
+  "question": {
+    "messageId": "a1b11004-0004-4a04-9a04-aa0400000004",
+    "text": "When does a transfer actually move, and what are the wire cut-off times?"
+  },
+  "responses": [
+    {
+      "type": "text",
+      "body": "A transfer between two accounts you hold with us is immediate and free, at any hour, on any day. Everything that leaves the bank has a cut-off. A standard transfer to an account you hold elsewhere takes one to three business days and has to be submitted by eight in the evening Eastern time to start that day. A domestic wire has to be in by five in the evening Eastern time on a business day and lands the same day; an international wire has to be in by three in the afternoon Eastern time and takes one to two business days. Anything submitted after the cut-off, at a weekend or on a public holiday starts on the next business day. Wires cannot be recalled once they have been sent, which is the reason we read the details back before submitting one; a standard transfer that has not left yet can still be cancelled.",
+      "messageId": "a1b11004-0004-4a04-9a04-bb0400000004"
+    }
+  ],
+  "createdAt": "2026-10-26T17:45:28.853Z",
+  "updatedAt": "2026-10-26T17:45:28.853Z",
+  "updatedBy": "cliCodex"
+}

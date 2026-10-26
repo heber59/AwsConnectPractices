@@ -1,0 +1,18 @@
+{
+  "knowledgeBaseId": "6cbc46e2-bd2a-4d94-a1b7-f25cc220464d",
+  "articleId": "a7a9c5f4-d4b9-429b-86cf-d7f279cc8263",
+  "question": {
+    "messageId": "a1b11005-0005-4a05-9a05-aa0500000005",
+    "text": "My card is missing: should I lock it or replace it?"
+  },
+  "responses": [
+    {
+      "type": "text",
+      "body": "Lock it first. Locking is instant, free and completely reversible: it stops new purchases, cash withdrawals and any attempt to add the card to a digital wallet, while letting your existing direct debits and recurring subscriptions keep running so nothing you rely on fails. If the card turns up in a coat pocket you unlock it and carry on with the same card number. Replacing is different. A replacement cancels the card number for good, so it is the right choice when the card was stolen, when it is damaged, or when you are confident it is gone. A replacement card arrives in five to seven business days, or one to two if you ask for it to be expedited, and it is free either way. Because the old number dies, anything set up to charge that card, such as a subscription, a season ticket, or a wallet on your phone, has to be pointed at the new one, and that is worth knowing before you choose. If money has already gone out of the account, locking or replacing the card does not by itself get it back; that is a dispute, and it is a separate step.",
+      "messageId": "a1b11005-0005-4a05-9a05-bb0500000005"
+    }
+  ],
+  "createdAt": "2026-10-26T17:45:30.546Z",
+  "updatedAt": "2026-10-26T17:45:30.546Z",
+  "updatedBy": "cliCodex"
+}

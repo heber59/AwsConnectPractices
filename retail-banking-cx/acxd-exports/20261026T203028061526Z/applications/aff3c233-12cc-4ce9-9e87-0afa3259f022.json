@@ -1,0 +1,75 @@
+{
+  "applicationId": "aff3c233-12cc-4ce9-9e87-0afa3259f022",
+  "name": "AnyBank -Welcome",
+  "flows": [
+    {
+      "flowId": "AnyBankWelcome"
+    },
+    {
+      "flowId": "Entry"
+    },
+    {
+      "flowId": "Main"
+    }
+  ],
+  "settings": {
+    "clusters": {
+      "enabled": false,
+      "frequency": {
+        "count": 1,
+        "resolution": "MONTH"
+      },
+      "phraseThreshold": {
+        "count": 100
+      },
+      "retention": {
+        "count": 30,
+        "resolution": "DAY"
+      }
+    },
+    "conversationTTL": 5,
+    "guardrails": [],
+    "languageCode": "en-US",
+    "languageCodes": [
+      "en-US"
+    ],
+    "languageSettings": [
+      {
+        "languageCode": "en-US",
+        "useLex3pAsr": false
+      }
+    ],
+    "lifecycleHooks": {},
+    "repeatOnIncomprehension": false,
+    "thresholds": {
+      "incomprehensionCount": 2
+    },
+    "defaultFlows": {
+      "ACXD.Escalation": {
+        "flowId": "Main"
+      },
+      "ACXD.Fallback": {
+        "flowId": "Main"
+      },
+      "ACXD.Unknown": {
+        "flowId": "Main"
+      },
+      "ACXD.Welcome": {
+        "flowId": "AnyBankWelcome"
+      }
+    }
+  },
+  "description": "",
+  "metadata": {
+    "path": "",
+    "tags": []
+  },
+  "deploymentSettings": {
+    "oneClickDeployEnabled": false,
+    "environment": "production",
+    "contextVariables": []
+  },
+  "createdAt": "2026-10-26T18:29:05.536Z",
+  "updatedAt": "2026-10-26T20:25:18.598Z",
+  "updatedBy": "hesan"
+}

@@ -1,0 +1,59 @@
+[
+  {
+    "buildId": "eadadc53-f7f9-4256-bac9-7714728849b2",
+    "applicationId": "aff3c233-12cc-4ce9-9e87-0afa3259f022",
+    "status": "BUILT",
+    "version": "v0.1.4",
+    "languageSettings": [
+      {
+        "languageCode": "en-US",
+        "useLex3pAsr": false
+      }
+    ],
+    "createdAt": "2026-10-26T20:25:17.990Z",
+    "updatedAt": "2026-10-26T20:25:18.592Z"
+  },
+  {
+    "buildId": "88e5714f-94ae-4c14-ae5b-d66fce23ce7c",
+    "applicationId": "aff3c233-12cc-4ce9-9e87-0afa3259f022",
+    "status": "BUILT",
+    "version": "v0.1.3",
+    "languageSettings": [
+      {
+        "languageCode": "en-US",
+        "useLex3pAsr": false
+      }
+    ],
+    "createdAt": "2026-10-26T19:51:19.025Z",
+    "updatedAt": "2026-10-26T19:51:19.856Z"
+  },
+  {
+    "buildId": "c3b81cff-998f-4863-a6d4-be9b8fffac93",
+    "applicationId": "aff3c233-12cc-4ce9-9e87-0afa3259f022",
+    "status": "BUILT",
+    "version": "v0.1.1",
+    "languageSettings": [
+      {
+        "languageCode": "en-US",
+        "useLex3pAsr": false
+      }
+    ],
+    "createdAt": "2026-10-26T19:04:27.488Z",
+    "updatedAt": "2026-10-26T19:04:28.233Z"
+  },
+  {
+    "buildId": "656088ba-b493-419a-981a-777a009c5230",
+    "applicationId": "aff3c233-12cc-4ce9-9e87-0afa3259f022",
+    "status": "BUILT",
+    "version": "v0.1.0",
+    "description": "welcome aiMenu",
+    "languageSettings": [
+      {
+        "languageCode": "en-US",
+        "useLex3pAsr": false
+      }
+    ],
+    "createdAt": "2026-10-26T18:52:51.666Z",
+    "updatedAt": "2026-10-26T18:52:52.392Z"
+  }
+]

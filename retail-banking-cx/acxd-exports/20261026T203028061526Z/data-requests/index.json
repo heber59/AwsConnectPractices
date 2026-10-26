@@ -1,0 +1,442 @@
+[
+  {
+    "dataRequestId": "fileDispute",
+    "type": "object",
+    "webhook": {
+      "method": "POST",
+      "sendContext": true,
+      "environments": {
+        "production": {
+          "headers": [
+            {
+              "dynamic": false,
+              "value": "{API_Key:NLX.Secret}",
+              "key": "x-api-key",
+              "required": false
+            }
+          ],
+          "url": "{API_URL_Base:NLX.Secret}/retail-banking/disputes?customerId={customerId}&transactionId={transactionId}&reason={reason}&amount={amount}"
+        }
+      },
+      "implementation": "external"
+    },
+    "requestSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "responseSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "sensitive": false,
+    "description": "Dispute a charge (transactionId TXN-BK-0000 from getTransactions). amount is positive; reason in the caller's words. Read the merchant, amount and date back first.",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:35.905Z",
+    "updatedAt": "2026-10-26T17:45:35.905Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "dataRequestId": "getPayees",
+    "type": "object",
+    "webhook": {
+      "method": "GET",
+      "sendContext": true,
+      "environments": {
+        "production": {
+          "headers": [
+            {
+              "dynamic": false,
+              "value": "{API_Key:NLX.Secret}",
+              "key": "x-api-key",
+              "required": false
+            }
+          ],
+          "url": "{API_URL_Base:NLX.Secret}/retail-banking/payees?customerId={customerId}"
+        }
+      },
+      "implementation": "external"
+    },
+    "requestSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "responseSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "sensitive": false,
+    "description": "List the caller's saved bill-pay payees",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:35.566Z",
+    "updatedAt": "2026-10-26T17:45:35.566Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "dataRequestId": "transferFunds",
+    "type": "object",
+    "webhook": {
+      "method": "POST",
+      "sendContext": true,
+      "environments": {
+        "production": {
+          "headers": [
+            {
+              "dynamic": false,
+              "value": "{API_Key:NLX.Secret}",
+              "key": "x-api-key",
+              "required": false
+            }
+          ],
+          "url": "{API_URL_Base:NLX.Secret}/retail-banking/transfers?customerId={customerId}&fromAccountId={fromAccountId}&toAccountId={toAccountId}&amount={amount}&memo={memo}"
+        }
+      },
+      "implementation": "external"
+    },
+    "requestSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "responseSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "sensitive": false,
+    "description": "Move money between the caller's own accounts (two different ids from getAccounts). amount in dollars; memo is required. Check availableBalance; confirm from, to and amount first.",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:35.255Z",
+    "updatedAt": "2026-10-26T17:45:35.255Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "dataRequestId": "getAccounts",
+    "type": "object",
+    "webhook": {
+      "method": "GET",
+      "sendContext": true,
+      "environments": {
+        "production": {
+          "headers": [
+            {
+              "dynamic": false,
+              "value": "{API_Key:NLX.Secret}",
+              "key": "x-api-key",
+              "required": false
+            }
+          ],
+          "url": "{API_URL_Base:NLX.Secret}/retail-banking/accounts?customerId={customerId}"
+        }
+      },
+      "implementation": "external"
+    },
+    "requestSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "responseSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "sensitive": false,
+    "description": "List the caller's accounts with their balances",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:34.953Z",
+    "updatedAt": "2026-10-26T17:45:34.953Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "dataRequestId": "getCards",
+    "type": "object",
+    "webhook": {
+      "method": "GET",
+      "sendContext": true,
+      "environments": {
+        "production": {
+          "headers": [
+            {
+              "dynamic": false,
+              "value": "{API_Key:NLX.Secret}",
+              "key": "x-api-key",
+              "required": false
+            }
+          ],
+          "url": "{API_URL_Base:NLX.Secret}/retail-banking/cards?customerId={customerId}"
+        }
+      },
+      "implementation": "external"
+    },
+    "requestSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "responseSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "sensitive": false,
+    "description": "List the caller's cards and their current status",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:34.592Z",
+    "updatedAt": "2026-10-26T17:45:34.592Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "dataRequestId": "getTransactions",
+    "type": "object",
+    "webhook": {
+      "method": "GET",
+      "sendContext": true,
+      "environments": {
+        "production": {
+          "headers": [
+            {
+              "dynamic": false,
+              "value": "{API_Key:NLX.Secret}",
+              "key": "x-api-key",
+              "required": false
+            }
+          ],
+          "url": "{API_URL_Base:NLX.Secret}/retail-banking/transactions?accountId={accountId}"
+        }
+      },
+      "implementation": "external"
+    },
+    "requestSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "responseSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "sensitive": false,
+    "description": "Posted transactions for one account (accountId CHK-000 or SAV-000, from getAccounts). There is no date filter: the whole history comes back.",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:34.265Z",
+    "updatedAt": "2026-10-26T17:45:34.265Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "dataRequestId": "unlockCard",
+    "type": "object",
+    "webhook": {
+      "method": "POST",
+      "sendContext": true,
+      "environments": {
+        "production": {
+          "headers": [
+            {
+              "dynamic": false,
+              "value": "{API_Key:NLX.Secret}",
+              "key": "x-api-key",
+              "required": false
+            }
+          ],
+          "url": "{API_URL_Base:NLX.Secret}/retail-banking/cards/{cardId}/unlock"
+        }
+      },
+      "implementation": "external"
+    },
+    "requestSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "responseSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "sensitive": false,
+    "description": "Return a locked card (CARD-0000) to active, only once the caller says it is safe. The reversible half of lockCard.",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:33.888Z",
+    "updatedAt": "2026-10-26T17:45:33.888Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "dataRequestId": "replaceCard",
+    "type": "object",
+    "webhook": {
+      "method": "POST",
+      "sendContext": true,
+      "environments": {
+        "production": {
+          "headers": [
+            {
+              "dynamic": false,
+              "value": "{API_Key:NLX.Secret}",
+              "key": "x-api-key",
+              "required": false
+            }
+          ],
+          "url": "{API_URL_Base:NLX.Secret}/retail-banking/cards/{cardId}/replace?reason={reason}"
+        }
+      },
+      "implementation": "external"
+    },
+    "requestSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "responseSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "sensitive": false,
+    "description": "Cancel a card (CARD-0000) and order a replacement. reason: lost, stolen or damaged; ask the caller. CANNOT be undone, so confirm explicitly first.",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:33.433Z",
+    "updatedAt": "2026-10-26T17:45:33.433Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "dataRequestId": "getDisputes",
+    "type": "object",
+    "webhook": {
+      "method": "GET",
+      "sendContext": true,
+      "environments": {
+        "production": {
+          "headers": [
+            {
+              "dynamic": false,
+              "value": "{API_Key:NLX.Secret}",
+              "key": "x-api-key",
+              "required": false
+            }
+          ],
+          "url": "{API_URL_Base:NLX.Secret}/retail-banking/disputes?customerId={customerId}"
+        }
+      },
+      "implementation": "external"
+    },
+    "requestSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "responseSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "sensitive": false,
+    "description": "Check the caller's existing disputes before filing a new one",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:33.074Z",
+    "updatedAt": "2026-10-26T17:45:33.074Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "dataRequestId": "payBill",
+    "type": "object",
+    "webhook": {
+      "method": "POST",
+      "sendContext": true,
+      "environments": {
+        "production": {
+          "headers": [
+            {
+              "dynamic": false,
+              "value": "{API_Key:NLX.Secret}",
+              "key": "x-api-key",
+              "required": false
+            }
+          ],
+          "url": "{API_URL_Base:NLX.Secret}/retail-banking/payments?customerId={customerId}&payeeId={payeeId}&fromAccountId={fromAccountId}&amount={amount}"
+        }
+      },
+      "implementation": "external"
+    },
+    "requestSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "responseSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "sensitive": false,
+    "description": "Pay a saved payee (payeeId PAYEE-000 from getPayees) from an account (from getAccounts); amount in dollars. Confirm payee, account and amount out loud first.",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:32.585Z",
+    "updatedAt": "2026-10-26T17:45:32.585Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "dataRequestId": "lockCard",
+    "type": "object",
+    "webhook": {
+      "method": "POST",
+      "sendContext": true,
+      "environments": {
+        "production": {
+          "headers": [
+            {
+              "dynamic": false,
+              "value": "{API_Key:NLX.Secret}",
+              "key": "x-api-key",
+              "required": false
+            }
+          ],
+          "url": "{API_URL_Base:NLX.Secret}/retail-banking/cards/{cardId}/lock"
+        }
+      },
+      "implementation": "external"
+    },
+    "requestSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "responseSchema": {
+      "type": "object",
+      "properties": {},
+      "isSensitive": false
+    },
+    "sensitive": false,
+    "description": "Freeze a card now (cardId CARD-0000 from getCards; confirm it by its last four digits). Reversible, so it is the safe first move.",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:32.169Z",
+    "updatedAt": "2026-10-26T17:45:32.169Z",
+    "updatedBy": "cliCodex"
+  }
+]

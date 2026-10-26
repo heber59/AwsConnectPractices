@@ -1,0 +1,12 @@
+{
+  "Name": "BasicQueue",
+  "QueueArn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/0fde798d-f6a0-4740-b442-af6a25267d97",
+  "QueueId": "0fde798d-f6a0-4740-b442-af6a25267d97",
+  "Description": "A simple, basic voice queue.",
+  "HoursOfOperationId": "e693137e-c587-44c9-a9ae-3c822d351024",
+  "Status": "ENABLED",
+  "Tags": {},
+  "LastModifiedTime": "2026-10-26 11:15:12.597000-05:00",
+  "LastModifiedRegion": "us-east-1",
+  "QuickConnects": []
+}

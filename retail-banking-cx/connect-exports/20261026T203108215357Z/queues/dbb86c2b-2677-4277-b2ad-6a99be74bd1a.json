@@ -1,0 +1,12 @@
+{
+  "Name": "AnyBank-Transfers",
+  "QueueArn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/dbb86c2b-2677-4277-b2ad-6a99be74bd1a",
+  "QueueId": "dbb86c2b-2677-4277-b2ad-6a99be74bd1a",
+  "Description": "transactions incidents",
+  "HoursOfOperationId": "e693137e-c587-44c9-a9ae-3c822d351024",
+  "Status": "ENABLED",
+  "Tags": {},
+  "LastModifiedTime": "2026-10-26 14:11:35.693000-05:00",
+  "LastModifiedRegion": "us-east-1",
+  "QuickConnects": []
+}

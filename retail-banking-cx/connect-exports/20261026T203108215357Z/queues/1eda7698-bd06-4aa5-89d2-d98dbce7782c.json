@@ -1,0 +1,12 @@
+{
+  "Name": "AnyBank-Accounts",
+  "QueueArn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/1eda7698-bd06-4aa5-89d2-d98dbce7782c",
+  "QueueId": "1eda7698-bd06-4aa5-89d2-d98dbce7782c",
+  "Description": "accounts problems",
+  "HoursOfOperationId": "e693137e-c587-44c9-a9ae-3c822d351024",
+  "Status": "ENABLED",
+  "Tags": {},
+  "LastModifiedTime": "2026-10-26 14:10:17.741000-05:00",
+  "LastModifiedRegion": "us-east-1",
+  "QuickConnects": []
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "Username": "transferAgent",
+    "RoutingProfileId": "318e8bb2-b5a0-4e9d-a3b7-6aa622bbdc9c",
+    "SecurityProfileIds": [
+      "60ad6763-9683-43f4-91f0-be0b0f4ae4e7"
+    ],
+    "PhoneConfig": {
+      "PhoneType": "SOFT_PHONE",
+      "AutoAccept": true,
+      "AfterContactWorkTimeLimit": 10,
+      "DeskPhoneNumber": "",
+      "PersistentConnection": true
+    }
+  },
+  {
+    "Username": "cardAgent",
+    "RoutingProfileId": "40e49c6d-bb8c-48e5-84b2-db4b46872008",
+    "SecurityProfileIds": [
+      "60ad6763-9683-43f4-91f0-be0b0f4ae4e7"
+    ],
+    "PhoneConfig": {
+      "PhoneType": "SOFT_PHONE",
+      "AutoAccept": true,
+      "AfterContactWorkTimeLimit": 10,
+      "DeskPhoneNumber": "",
+      "PersistentConnection": true
+    }
+  },
+  {
+    "Username": "accountAgent",
+    "RoutingProfileId": "7e7dbbd9-6dd5-4a97-aa5b-f20d72be5525",
+    "SecurityProfileIds": [
+      "60ad6763-9683-43f4-91f0-be0b0f4ae4e7"
+    ],
+    "PhoneConfig": {
+      "PhoneType": "SOFT_PHONE",
+      "AutoAccept": true,
+      "AfterContactWorkTimeLimit": 10,
+      "DeskPhoneNumber": "",
+      "PersistentConnection": true
+    }
+  }
+]

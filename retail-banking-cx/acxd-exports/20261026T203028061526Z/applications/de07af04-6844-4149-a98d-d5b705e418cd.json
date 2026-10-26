@@ -1,0 +1,67 @@
+{
+  "applicationId": "de07af04-6844-4149-a98d-d5b705e418cd",
+  "name": "Retail Banking",
+  "flows": [
+    {
+      "flowId": "Entry"
+    },
+    {
+      "flowId": "Main"
+    }
+  ],
+  "settings": {
+    "clusters": {
+      "enabled": false,
+      "frequency": {
+        "count": 1,
+        "resolution": "MONTH"
+      },
+      "phraseThreshold": {
+        "count": 100
+      },
+      "retention": {
+        "count": 30,
+        "resolution": "DAY"
+      }
+    },
+    "conversationTTL": 5,
+    "guardrails": [],
+    "languageCode": "en-US",
+    "languageCodes": [
+      "en-US"
+    ],
+    "languageSettings": [
+      {
+        "languageCode": "en-US"
+      }
+    ],
+    "lifecycleHooks": {},
+    "repeatOnIncomprehension": false,
+    "thresholds": {
+      "incomprehensionCount": 2
+    },
+    "defaultFlows": {
+      "ACXD.Fallback": {
+        "flowId": "Main"
+      },
+      "ACXD.Unknown": {
+        "flowId": "Main"
+      },
+      "ACXD.Welcome": {
+        "flowId": "Entry"
+      }
+    }
+  },
+  "description": "AnyBank demo restored into the current sandbox; backend tools pending",
+  "metadata": {
+    "tags": []
+  },
+  "deploymentSettings": {
+    "oneClickDeployEnabled": false,
+    "environment": "production",
+    "contextVariables": []
+  },
+  "createdAt": "2026-10-26T17:45:38.793Z",
+  "updatedAt": "2026-10-26T17:46:52.498Z",
+  "updatedBy": "cliCodex"
+}

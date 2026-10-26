@@ -1,0 +1,141 @@
+{
+  "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/da70ffde-42ff-4ecd-8e14-552a0a370809",
+  "Id": "da70ffde-42ff-4ecd-8e14-552a0a370809",
+  "Name": "AnyBank - entrada",
+  "Type": "CONTACT_FLOW",
+  "State": "ACTIVE",
+  "Status": "PUBLISHED",
+  "Description": "",
+  "Content": {
+    "Version": "2019-10-30",
+    "StartAction": "welcom",
+    "Metadata": {
+      "entryPointPosition": {
+        "x": 40,
+        "y": 40
+      },
+      "ActionMetadata": {
+        "welcom": {
+          "position": {
+            "x": 172.8,
+            "y": 67.2
+          },
+          "isFriendlyName": true
+        },
+        "try again prompt": {
+          "position": {
+            "x": 185.6,
+            "y": 284
+          },
+          "isFriendlyName": true
+        },
+        "menuWelcom": {
+          "position": {
+            "x": 518.4,
+            "y": 51.2
+          },
+          "isFriendlyName": true,
+          "conditionMetadata": []
+        },
+        "8a0ac7b4-cf46-4c5e-954d-3287ec8e6723": {
+          "position": {
+            "x": 573.6,
+            "y": 429.6
+          }
+        }
+      },
+      "Annotations": []
+    },
+    "Actions": [
+      {
+        "Parameters": {
+          "SkipWhenDTMFBufferEnabled": "false",
+          "Text": "Welcome to Anybank. Thank you for calling. We\u2019re happy to assist you."
+        },
+        "Identifier": "welcom",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "menuWelcom",
+          "Errors": [
+            {
+              "NextAction": "try again prompt",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "LoopCount": "1"
+        },
+        "Identifier": "try again prompt",
+        "Type": "Loop",
+        "Transitions": {
+          "NextAction": "menuWelcom",
+          "Conditions": [
+            {
+              "NextAction": "welcom",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "ContinueLooping"
+                ]
+              }
+            },
+            {
+              "NextAction": "menuWelcom",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "DoneLooping"
+                ]
+              }
+            }
+          ],
+          "Errors": [
+            {
+              "NextAction": "8a0ac7b4-cf46-4c5e-954d-3287ec8e6723",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "StoreInput": "False",
+          "InputTimeLimitSeconds": "5",
+          "Text": "1. \n2."
+        },
+        "Identifier": "menuWelcom",
+        "Type": "GetParticipantInput",
+        "Transitions": {
+          "NextAction": "8a0ac7b4-cf46-4c5e-954d-3287ec8e6723",
+          "Errors": [
+            {
+              "NextAction": "8a0ac7b4-cf46-4c5e-954d-3287ec8e6723",
+              "ErrorType": "InputTimeLimitExceeded"
+            },
+            {
+              "NextAction": "8a0ac7b4-cf46-4c5e-954d-3287ec8e6723",
+              "ErrorType": "NoMatchingCondition"
+            },
+            {
+              "NextAction": "8a0ac7b4-cf46-4c5e-954d-3287ec8e6723",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {},
+        "Identifier": "8a0ac7b4-cf46-4c5e-954d-3287ec8e6723",
+        "Type": "DisconnectParticipant",
+        "Transitions": {}
+      }
+    ]
+  },
+  "Tags": {},
+  "FlowContentSha256": "516998685d78f87b49a4d0b7ae312ccc3cc76368c58926f0b3160a32e7a77833",
+  "LastModifiedTime": "2026-10-26 11:37:39.615000-05:00",
+  "LastModifiedRegion": "us-east-1"
+}

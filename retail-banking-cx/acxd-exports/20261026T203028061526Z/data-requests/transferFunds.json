@@ -1,0 +1,40 @@
+{
+  "dataRequestId": "transferFunds",
+  "type": "object",
+  "webhook": {
+    "method": "POST",
+    "sendContext": true,
+    "environments": {
+      "production": {
+        "headers": [
+          {
+            "dynamic": false,
+            "value": "{API_Key:NLX.Secret}",
+            "key": "x-api-key",
+            "required": false
+          }
+        ],
+        "url": "{API_URL_Base:NLX.Secret}/retail-banking/transfers?customerId={customerId}&fromAccountId={fromAccountId}&toAccountId={toAccountId}&amount={amount}&memo={memo}"
+      }
+    },
+    "implementation": "external"
+  },
+  "requestSchema": {
+    "type": "object",
+    "properties": {},
+    "isSensitive": false
+  },
+  "responseSchema": {
+    "type": "object",
+    "properties": {},
+    "isSensitive": false
+  },
+  "sensitive": false,
+  "description": "Move money between the caller's own accounts (two different ids from getAccounts). amount in dollars; memo is required. Check availableBalance; confirm from, to and amount first.",
+  "metadata": {
+    "tags": []
+  },
+  "createdAt": "2026-10-26T17:45:35.255Z",
+  "updatedAt": "2026-10-26T17:45:35.255Z",
+  "updatedBy": "cliCodex"
+}

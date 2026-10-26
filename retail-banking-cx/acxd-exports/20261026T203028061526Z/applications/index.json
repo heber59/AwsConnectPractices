@@ -1,0 +1,32 @@
+[
+  {
+    "applicationId": "aff3c233-12cc-4ce9-9e87-0afa3259f022",
+    "name": "AnyBank -Welcome",
+    "description": "",
+    "metadata": {
+      "path": "",
+      "tags": []
+    },
+    "createdAt": "2026-10-26T18:29:05.536Z",
+    "updatedAt": "2026-10-26T20:25:18.598Z"
+  },
+  {
+    "applicationId": "de07af04-6844-4149-a98d-d5b705e418cd",
+    "name": "Retail Banking",
+    "description": "AnyBank demo restored into the current sandbox; backend tools pending",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:38.793Z",
+    "updatedAt": "2026-10-26T17:46:52.498Z"
+  },
+  {
+    "applicationId": "06179fa1-43a9-459d-b9d2-2b70fd59888c",
+    "name": "Workshop",
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:38.360Z",
+    "updatedAt": "2026-10-26T17:45:38.360Z"
+  }
+]

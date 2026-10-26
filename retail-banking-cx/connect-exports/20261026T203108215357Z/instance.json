@@ -1,0 +1,13 @@
+{
+  "Id": "e9850d77-8227-4fdb-ad6c-c98a6d1e3db7",
+  "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7",
+  "IdentityManagementType": "CONNECT_MANAGED",
+  "InstanceAlias": "hesan",
+  "CreatedTime": "2026-10-26 11:15:10-05:00",
+  "ServiceRole": "arn:aws:iam::038462758107:role/aws-service-role/connect.amazonaws.com/AWSServiceRoleForAmazonConnect_YPWf9jHgKwiAoKr0A39R",
+  "InstanceStatus": "ACTIVE",
+  "InboundCallsEnabled": true,
+  "OutboundCallsEnabled": true,
+  "InstanceAccessUrl": "https://hesan.my.connect.aws",
+  "Tags": {}
+}

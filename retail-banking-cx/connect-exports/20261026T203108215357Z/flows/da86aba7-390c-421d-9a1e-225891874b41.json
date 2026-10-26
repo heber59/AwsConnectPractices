@@ -1,0 +1,61 @@
+{
+  "Arn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/contact-flow/da86aba7-390c-421d-9a1e-225891874b41",
+  "Id": "da86aba7-390c-421d-9a1e-225891874b41",
+  "Name": "Default agent hold",
+  "Type": "AGENT_HOLD",
+  "State": "ACTIVE",
+  "Status": "PUBLISHED",
+  "Description": "Audio played for the agent when on hold",
+  "Content": {
+    "Version": "2019-10-30",
+    "StartAction": "1a34ecf3-77ff-46a7-b210-38a1a980127b",
+    "Metadata": {
+      "entryPointPosition": {
+        "x": 75,
+        "y": 20
+      },
+      "snapToGrid": false,
+      "ActionMetadata": {
+        "1a34ecf3-77ff-46a7-b210-38a1a980127b": {
+          "position": {
+            "x": 258,
+            "y": 66
+          },
+          "audio": [
+            {
+              "type": "Text",
+              "tts": "<speak>You are on hold <break time=\"10s\"/></speak>",
+              "$$hashKey": "01J",
+              "ttsType": "ssml"
+            }
+          ],
+          "timeoutUnit": {
+            "display": "Minutes",
+            "value": "min"
+          }
+        }
+      }
+    },
+    "Actions": [
+      {
+        "Identifier": "1a34ecf3-77ff-46a7-b210-38a1a980127b",
+        "Parameters": {
+          "Messages": [
+            {
+              "SSML": "<speak>You are on hold <break time=\"10s\"/></speak>"
+            }
+          ]
+        },
+        "Transitions": {
+          "Errors": [],
+          "Conditions": []
+        },
+        "Type": "MessageParticipantIteratively"
+      }
+    ]
+  },
+  "Tags": {},
+  "FlowContentSha256": "0606386965ce16ed4c6df2b0d3d9851c0ce8758a24c3ef607f1fb87fbf023688",
+  "LastModifiedTime": "2026-10-26 11:15:20.899000-05:00",
+  "LastModifiedRegion": "us-east-1"
+}

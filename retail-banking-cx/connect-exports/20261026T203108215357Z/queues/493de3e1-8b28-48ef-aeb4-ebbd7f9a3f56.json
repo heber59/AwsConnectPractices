@@ -1,0 +1,12 @@
+{
+  "Name": "AnyBank-Cards",
+  "QueueArn": "arn:aws:connect:us-east-1:038462758107:instance/e9850d77-8227-4fdb-ad6c-c98a6d1e3db7/queue/493de3e1-8b28-48ef-aeb4-ebbd7f9a3f56",
+  "QueueId": "493de3e1-8b28-48ef-aeb4-ebbd7f9a3f56",
+  "Description": "problems with cards",
+  "HoursOfOperationId": "e693137e-c587-44c9-a9ae-3c822d351024",
+  "Status": "ENABLED",
+  "Tags": {},
+  "LastModifiedTime": "2026-10-26 14:11:15.923000-05:00",
+  "LastModifiedRegion": "us-east-1",
+  "QuickConnects": []
+}

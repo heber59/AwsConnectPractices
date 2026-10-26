@@ -1,0 +1,65 @@
+[
+  {
+    "flowId": "AnyBankWelcome",
+    "description": "AnyBank welcome greeting; customer request capture will be added next.",
+    "untrained": true,
+    "mainLanguageCode": "en-US",
+    "languageCodes": [
+      "en-US"
+    ],
+    "slotTypes": [],
+    "metadata": {
+      "tags": []
+    },
+    "saveId": "544485d1-0cdc-4933-bbba-d2ee3b4dfe6d",
+    "createdAt": "2026-10-26T18:30:38.086Z",
+    "updatedAt": "2026-10-26T20:24:43.718Z",
+    "updatedBy": "hesan"
+  },
+  {
+    "flowId": "Entry",
+    "aiDescription": "Authentication flow for AnyBank. Verifies the caller by capturing their customer ID against the enumerated set of valid identifiers, copies the verified value into the customerId context variable, and hands off to the Main flow. Re-entry with an already-verified caller skips straight to Main. A no-match repairs and retries up to three tries, then escalates to a person.",
+    "untrained": true,
+    "mainLanguageCode": "en-US",
+    "languageCodes": [
+      "en-US"
+    ],
+    "slotTypes": [
+      {
+        "name": "CustomerID",
+        "sensitive": false,
+        "type": "customerId",
+        "examples": [
+          "My customer ID is CUST-12345",
+          "customer CUST-67890",
+          "it's CUST-11111",
+          "CUST-12345",
+          "cust-67890"
+        ],
+        "aiDescription": "The caller's customer identifier, in the shape CUST-00000. Extract it from the caller's phrase and resolve it against the enumerated set of valid customer identifiers, which canonicalises the casing."
+      }
+    ],
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:37.489Z",
+    "updatedAt": "2026-10-26T17:45:37.489Z",
+    "updatedBy": "cliCodex"
+  },
+  {
+    "flowId": "Main",
+    "aiDescription": "Retail banking customer service agent for AnyBank. Reads balances and recent transactions, moves money between the caller's own accounts, pays a saved payee, locks, unlocks or replaces a card, files a dispute about a charge the caller does not recognise, and answers general questions about fees, overdraft, limits, timing and the dispute process from the knowledge base. Confirms every write out loud before it lands, and gives no financial advice.",
+    "untrained": true,
+    "mainLanguageCode": "en-US",
+    "languageCodes": [
+      "en-US"
+    ],
+    "slotTypes": [],
+    "metadata": {
+      "tags": []
+    },
+    "createdAt": "2026-10-26T17:45:36.793Z",
+    "updatedAt": "2026-10-26T17:45:36.793Z",
+    "updatedBy": "cliCodex"
+  }
+]

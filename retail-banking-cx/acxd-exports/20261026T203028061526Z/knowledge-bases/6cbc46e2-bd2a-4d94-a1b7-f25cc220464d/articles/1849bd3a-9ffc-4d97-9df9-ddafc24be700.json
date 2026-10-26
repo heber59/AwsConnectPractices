@@ -1,0 +1,18 @@
+{
+  "knowledgeBaseId": "6cbc46e2-bd2a-4d94-a1b7-f25cc220464d",
+  "articleId": "1849bd3a-9ffc-4d97-9df9-ddafc24be700",
+  "question": {
+    "messageId": "a1b11002-0002-4a02-9a02-aa0200000002",
+    "text": "How does overdraft work, and what is overdraft protection?"
+  },
+  "responses": [
+    {
+      "type": "text",
+      "body": "An overdraft happens when a payment or a card charge is more than your available balance and we pay it anyway. When that happens the fee is thirty-four dollars, and no more than three of them can be charged in one day. Two things reduce that. First, we do not charge an overdraft fee on any item of five dollars or less, and we do not charge one if your account ends the day no more than fifty dollars negative. Second, overdraft protection links your checking account to another account you hold, usually savings, and pulls the shortfall across automatically instead of overdrawing; that transfer is free. Overdraft protection is something you switch on per account and it can be added or removed at any time. Worth knowing the difference between the two balances you will hear: the posted balance is what has settled, and the available balance is what you can actually spend right now, which is lower while a charge is still pending. Overdraft is judged against the available balance.",
+      "messageId": "a1b11002-0002-4a02-9a02-bb0200000002"
+    }
+  ],
+  "createdAt": "2026-10-26T17:45:29.742Z",
+  "updatedAt": "2026-10-26T17:45:29.742Z",
+  "updatedBy": "cliCodex"
+}
