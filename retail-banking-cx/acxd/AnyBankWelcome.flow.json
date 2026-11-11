@@ -1,0 +1,1050 @@
+{
+  "flowId": "AnyBankWelcome",
+  "description": "Local cards expansion: clarify card requests before handoff to the existing cards queue.",
+  "untrained": true,
+  "mainLanguageCode": "en-US",
+  "languageCodes": [
+    "en-US"
+  ],
+  "slotTypes": [],
+  "metadata": {
+    "tags": []
+  },
+  "nodes": {
+    "04b0fb12-0297-4c4a-990f-bd74721ec068": {
+      "canvasMetadata": {
+        "height": 131,
+        "isMinimized": false,
+        "width": 240,
+        "x": -180.5254821095764,
+        "y": 329.63073797861625
+      },
+      "childNodes": [
+        {
+          "conditions": [],
+          "name": "",
+          "nodeId": "37b67fde-5851-4ba1-83f8-795f03816806"
+        },
+        {
+          "conditions": [
+            {
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": "continuation"
+              }
+            }
+          ],
+          "name": ""
+        }
+      ],
+      "messages": [],
+      "metadata": {
+        "async": false,
+        "loop": {
+          "end": 1,
+          "name": "rangeIndex",
+          "start": 1,
+          "type": "range",
+          "startOperand": {
+            "type": "constant",
+            "value": 1
+          },
+          "endOperand": {
+            "type": "constant",
+            "value": 1
+          }
+        },
+        "name": "",
+        "stateModifications": []
+      },
+      "modalities": {},
+      "nodeId": "04b0fb12-0297-4c4a-990f-bd74721ec068",
+      "type": "loop"
+    },
+    "14882f72-a7c9-4a8f-98e7-59637d7b78b5": {
+      "canvasMetadata": {
+        "height": 177,
+        "isMinimized": false,
+        "width": 240,
+        "x": 759.1804002433647,
+        "y": -227.03102672726612
+      },
+      "childNodes": [
+        {
+          "conditions": [],
+          "name": "",
+          "nodeId": "2f014f2c-5fe8-466f-ba0b-4bf44a052968"
+        }
+      ],
+      "messages": [
+        {
+          "body": "Hi Vip",
+          "messageId": "35429df7-c3a1-4a6a-97f6-90573b450094",
+          "metadata": {},
+          "skipTranslation": false,
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "async": false,
+        "name": "",
+        "stateModifications": [
+          {
+            "modification": "set",
+            "name": "customerTier",
+            "type": "context",
+            "value": {
+              "type": "constant",
+              "value": "VIP"
+            }
+          }
+        ]
+      },
+      "modalities": {},
+      "nodeId": "14882f72-a7c9-4a8f-98e7-59637d7b78b5",
+      "type": "basic"
+    },
+    "2f014f2c-5fe8-466f-ba0b-4bf44a052968": {
+      "canvasMetadata": {
+        "height": 195,
+        "isMinimized": false,
+        "width": 240,
+        "x": 764.4745178904236,
+        "y": -2.097673037878451
+      },
+      "childNodes": [
+        {
+          "conditions": [],
+          "name": "",
+          "nodeId": "ca000001-0000-4000-8000-000000000001"
+        }
+      ],
+      "messages": [
+        {
+          "body": "Let us identify the card support you need.",
+          "messageId": "d8612ce1-31ab-4056-a65a-2975028d5c32",
+          "metadata": {},
+          "skipTranslation": false,
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "async": false,
+        "name": "",
+        "stateModifications": [
+          {
+            "modification": "set",
+            "name": "routingDepartment",
+            "type": "context",
+            "value": {
+              "type": "constant",
+              "value": "card"
+            }
+          }
+        ]
+      },
+      "modalities": {},
+      "nodeId": "2f014f2c-5fe8-466f-ba0b-4bf44a052968",
+      "type": "basic"
+    },
+    "37b67fde-5851-4ba1-83f8-795f03816806": {
+      "canvasMetadata": {
+        "height": 145,
+        "isMinimized": false,
+        "width": 240,
+        "x": 134.4745178904236,
+        "y": 144.88073797861625
+      },
+      "childNodes": [
+        {
+          "conditions": [],
+          "name": "",
+          "nodeId": "9d864136-50a5-4642-9efb-221b5bb422ae"
+        }
+      ],
+      "messages": [
+        {
+          "body": "Let’s try again. How can I help you today?",
+          "messageId": "bd665be2-e8cb-4ded-a9d4-5c1e6f5864fb",
+          "metadata": {},
+          "skipTranslation": false,
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "async": false,
+        "name": "",
+        "stateModifications": []
+      },
+      "modalities": {},
+      "nodeId": "37b67fde-5851-4ba1-83f8-795f03816806",
+      "type": "basic"
+    },
+    "80e93123-16a9-496a-86a2-fecabccc80f3": {
+      "canvasMetadata": {
+        "height": 129,
+        "isMinimized": false,
+        "width": 240,
+        "x": 1201.2392237727765,
+        "y": 292.18956150802796
+      },
+      "childNodes": [
+        {
+          "conditions": [
+            {
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": "continuation"
+              }
+            }
+          ],
+          "name": ""
+        }
+      ],
+      "messages": [],
+      "metadata": {
+        "async": false,
+        "name": "",
+        "stateModifications": []
+      },
+      "modalities": {},
+      "nodeId": "80e93123-16a9-496a-86a2-fecabccc80f3",
+      "type": "escalate"
+    },
+    "9d864136-50a5-4642-9efb-221b5bb422ae": {
+      "canvasMetadata": {
+        "height": 397,
+        "isMinimized": false,
+        "width": 240,
+        "x": 447.99610687392897,
+        "y": 125.38073797861625
+      },
+      "childNodes": [
+        {
+          "conditions": [
+            {
+              "left": {
+                "name": "System.gjConditionIndex",
+                "type": "system"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": 0
+              }
+            }
+          ],
+          "name": "",
+          "nodeId": "a7db0cff-7726-465c-b229-54088a236fe8"
+        },
+        {
+          "conditions": [
+            {
+              "left": {
+                "name": "System.gjConditionIndex",
+                "type": "system"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": 1
+              }
+            }
+          ],
+          "name": "",
+          "nodeId": "2f014f2c-5fe8-466f-ba0b-4bf44a052968"
+        },
+        {
+          "conditions": [
+            {
+              "left": {
+                "name": "System.gjConditionIndex",
+                "type": "system"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": 2
+              }
+            }
+          ],
+          "name": "",
+          "nodeId": "d352fbcd-f5ef-4897-84da-c193cf9d12be"
+        },
+        {
+          "conditions": [
+            {
+              "left": {
+                "name": "System.gjConditionIndex",
+                "type": "system"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": 3
+              }
+            }
+          ],
+          "name": "",
+          "nodeId": "14882f72-a7c9-4a8f-98e7-59637d7b78b5"
+        },
+        {
+          "conditions": [
+            {
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": "timeout"
+              }
+            }
+          ],
+          "name": "",
+          "nodeId": "04b0fb12-0297-4c4a-990f-bd74721ec068"
+        },
+        {
+          "conditions": [
+            {
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq",
+              "right": {
+                "type": "constant",
+                "value": "failure"
+              }
+            }
+          ],
+          "name": "",
+          "nodeId": "04b0fb12-0297-4c4a-990f-bd74721ec068"
+        }
+      ],
+      "messages": [],
+      "metadata": {
+        "async": false,
+        "generativeJourney": {
+          "enableZeroTurnMode": false,
+          "exitConditions": [
+            {
+              "name": "account",
+              "prompt": "The caller has confirmed they need help with account balances, account details, or account activity."
+            },
+            {
+              "name": "card",
+              "prompt": "Caller confirmed card support: lost/stolen card, blocked card, declined card purchase, unrecognized card charge, damaged card, replacement, or another card issue."
+            },
+            {
+              "name": "transfer",
+              "prompt": "The caller has confirmed they need help sending money or resolving a bank transfer problem."
+            },
+            {
+              "name": "Vip",
+              "prompt": "the user has a vip credential."
+            }
+          ],
+          "maxSteps": 10,
+          "maxTokens": 8192,
+          "modelType": "anthropic.claude-haiku-4-5",
+          "prompt": "You are River, AnyBank's telephone assistant.\n\nYour task is to understand why the caller is contacting the bank.\nAsk: \"How can I help you today?\"\n\nIdentify whether the request concerns:\n- Accounts: balances, account details, or account activity.\n- Cards: lost/stolen cards, blocked cards, declined card purchases, unrecognized card charges, damaged cards, replacements, or other card issues. Bank transfers belong to transfers.\n- Transfers: sending money or problems with a transfer.\n-Vip: is a vip member that need any request.\n\nIf the request is unclear, ask one short clarifying question.\nIf it is outside these categories, do not force a classification.\n\nOnce you understand the request, briefly confirm it with the caller.\n\nSpeak naturally, using short sentences suitable for a phone call.\nAsk one question at a time.\nDo not request account numbers, card numbers, passwords, or PINs.\nDo not claim to check banking data or transfer the call.\nAfter identifying the request, ask the caller to confirm your understanding.\nIf they correct you, clarify their request before proceeding.\nOnce they confirm, exit through the matching condition.",
+          "promptVersion": "latest",
+          "temperature": 0.2,
+          "tools": []
+        },
+        "name": "",
+        "stateModifications": []
+      },
+      "modalities": {},
+      "nodeId": "9d864136-50a5-4642-9efb-221b5bb422ae",
+      "type": "generative_journey"
+    },
+    "a7db0cff-7726-465c-b229-54088a236fe8": {
+      "canvasMetadata": {
+        "height": 195,
+        "isMinimized": false,
+        "width": 240,
+        "x": 764.4745178904236,
+        "y": 226.38073797861625
+      },
+      "childNodes": [
+        {
+          "conditions": [],
+          "name": "",
+          "nodeId": "80e93123-16a9-496a-86a2-fecabccc80f3"
+        }
+      ],
+      "messages": [
+        {
+          "body": "I’ll connect you with our accounts section.",
+          "messageId": "db172470-e544-4e40-876a-fe0d9a572449",
+          "metadata": {},
+          "skipTranslation": false,
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "async": false,
+        "name": "",
+        "stateModifications": [
+          {
+            "modification": "set",
+            "name": "routingDepartment",
+            "type": "context",
+            "value": {
+              "type": "constant",
+              "value": "account"
+            }
+          }
+        ]
+      },
+      "modalities": {},
+      "nodeId": "a7db0cff-7726-465c-b229-54088a236fe8",
+      "type": "basic"
+    },
+    "d352fbcd-f5ef-4897-84da-c193cf9d12be": {
+      "canvasMetadata": {
+        "height": 195,
+        "isMinimized": false,
+        "width": 240,
+        "x": 764.4745178904236,
+        "y": 476.67485562567504
+      },
+      "childNodes": [
+        {
+          "conditions": [],
+          "name": "",
+          "nodeId": "80e93123-16a9-496a-86a2-fecabccc80f3"
+        }
+      ],
+      "messages": [
+        {
+          "body": "I’ll connect you with our transfers section.",
+          "messageId": "e98a9ba9-1edd-49ab-898d-95b191c0cbcf",
+          "metadata": {},
+          "skipTranslation": false,
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "async": false,
+        "name": "",
+        "stateModifications": [
+          {
+            "modification": "set",
+            "name": "routingDepartment",
+            "type": "context",
+            "value": {
+              "type": "constant",
+              "value": "transfer"
+            }
+          }
+        ]
+      },
+      "modalities": {},
+      "nodeId": "d352fbcd-f5ef-4897-84da-c193cf9d12be",
+      "type": "basic"
+    },
+    "e4145af2-5da8-4b08-9a7f-7376c2c78356": {
+      "canvasMetadata": {
+        "height": 198,
+        "isMinimized": false,
+        "width": 240,
+        "x": -180.5254821095764,
+        "y": 779.8807379786163
+      },
+      "childNodes": [
+        {
+          "conditions": [],
+          "name": "",
+          "nodeId": "e76357fa-cbf2-4415-8d9f-d02046d4c291"
+        }
+      ],
+      "messages": [],
+      "metadata": {
+        "async": false,
+        "name": "",
+        "stateModifications": []
+      },
+      "modalities": {},
+      "nodeId": "e4145af2-5da8-4b08-9a7f-7376c2c78356",
+      "type": "start"
+    },
+    "e76357fa-cbf2-4415-8d9f-d02046d4c291": {
+      "canvasMetadata": {
+        "height": 145,
+        "isMinimized": false,
+        "width": 240,
+        "x": 134.4745178904236,
+        "y": 806.3807379786163
+      },
+      "childNodes": [
+        {
+          "conditions": [],
+          "name": "",
+          "nodeId": "9d864136-50a5-4642-9efb-221b5bb422ae"
+        }
+      ],
+      "messages": [
+        {
+          "body": "Welcome to AnyBank. How can I help you today?",
+          "messageId": "96ffa5ed-6c00-4fcf-8f81-22b376432813",
+          "metadata": {},
+          "skipTranslation": false,
+          "type": "text"
+        }
+      ],
+      "metadata": {
+        "async": false,
+        "name": "",
+        "stateModifications": []
+      },
+      "modalities": {},
+      "nodeId": "e76357fa-cbf2-4415-8d9f-d02046d4c291",
+      "type": "basic"
+    },
+    "ca000001-0000-4000-8000-000000000010": {
+      "nodeId": "ca000001-0000-4000-8000-000000000010",
+      "canvasMetadata": {
+        "x": 1500,
+        "isMinimized": false,
+        "y": 0,
+        "width": 240,
+        "height": 195
+      },
+      "metadata": {
+        "name": "Cards: lost_stolen",
+        "stateModifications": [
+          {
+            "modification": "set",
+            "value": {
+              "value": "card",
+              "type": "constant"
+            },
+            "name": "routingDepartment",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "lost_stolen",
+              "type": "constant"
+            },
+            "name": "cardRequestType",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "Customer reports a lost or stolen card. Agent review needed. No card action performed.",
+              "type": "constant"
+            },
+            "name": "handoffSummary",
+            "type": "context"
+          }
+        ],
+        "async": false
+      },
+      "type": "basic",
+      "childNodes": [
+        {
+          "name": "",
+          "nodeId": "80e93123-16a9-496a-86a2-fecabccc80f3",
+          "conditions": []
+        }
+      ],
+      "modalities": {},
+      "messages": [
+        {
+          "body": "I will connect you with card support about your lost or stolen card. This assistant has not blocked the card.",
+          "skipTranslation": false,
+          "metadata": {},
+          "messageId": "7f3ba0b3-a467-4a21-bc46-8304201d3935",
+          "type": "text"
+        }
+      ]
+    },
+    "ca000001-0000-4000-8000-000000000011": {
+      "nodeId": "ca000001-0000-4000-8000-000000000011",
+      "canvasMetadata": {
+        "x": 1500,
+        "isMinimized": false,
+        "y": 250,
+        "width": 240,
+        "height": 195
+      },
+      "metadata": {
+        "name": "Cards: unrecognized_charge",
+        "stateModifications": [
+          {
+            "modification": "set",
+            "value": {
+              "value": "card",
+              "type": "constant"
+            },
+            "name": "routingDepartment",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "unrecognized_charge",
+              "type": "constant"
+            },
+            "name": "cardRequestType",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "Customer reports an unrecognized card charge. Agent must review possible fraud and dispute options. No dispute filed.",
+              "type": "constant"
+            },
+            "name": "handoffSummary",
+            "type": "context"
+          }
+        ],
+        "async": false
+      },
+      "type": "basic",
+      "childNodes": [
+        {
+          "name": "",
+          "nodeId": "80e93123-16a9-496a-86a2-fecabccc80f3",
+          "conditions": []
+        }
+      ],
+      "modalities": {},
+      "messages": [
+        {
+          "body": "I will connect you with card support about the charge you do not recognize. This assistant has not filed a dispute.",
+          "skipTranslation": false,
+          "metadata": {},
+          "messageId": "bf88c4d8-4b0d-46c2-b62e-017cb38c3638",
+          "type": "text"
+        }
+      ]
+    },
+    "ca000001-0000-4000-8000-000000000012": {
+      "nodeId": "ca000001-0000-4000-8000-000000000012",
+      "canvasMetadata": {
+        "x": 1500,
+        "isMinimized": false,
+        "y": 500,
+        "width": 240,
+        "height": 195
+      },
+      "metadata": {
+        "name": "Cards: blocked_declined",
+        "stateModifications": [
+          {
+            "modification": "set",
+            "value": {
+              "value": "card",
+              "type": "constant"
+            },
+            "name": "routingDepartment",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "blocked_declined",
+              "type": "constant"
+            },
+            "name": "cardRequestType",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "Customer reports a blocked card or declined card purchase. No card action performed.",
+              "type": "constant"
+            },
+            "name": "handoffSummary",
+            "type": "context"
+          }
+        ],
+        "async": false
+      },
+      "type": "basic",
+      "childNodes": [
+        {
+          "name": "",
+          "nodeId": "80e93123-16a9-496a-86a2-fecabccc80f3",
+          "conditions": []
+        }
+      ],
+      "modalities": {},
+      "messages": [
+        {
+          "body": "I will connect you with card support about the blocked card or declined purchase. This assistant has not unlocked the card.",
+          "skipTranslation": false,
+          "metadata": {},
+          "messageId": "b3fe873c-719c-486e-a1e9-945a38a8a9a3",
+          "type": "text"
+        }
+      ]
+    },
+    "ca000001-0000-4000-8000-000000000013": {
+      "nodeId": "ca000001-0000-4000-8000-000000000013",
+      "canvasMetadata": {
+        "x": 1500,
+        "isMinimized": false,
+        "y": 750,
+        "width": 240,
+        "height": 195
+      },
+      "metadata": {
+        "name": "Cards: damaged_replacement",
+        "stateModifications": [
+          {
+            "modification": "set",
+            "value": {
+              "value": "card",
+              "type": "constant"
+            },
+            "name": "routingDepartment",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "damaged_replacement",
+              "type": "constant"
+            },
+            "name": "cardRequestType",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "Customer requests help with a damaged card or replacement. No replacement ordered.",
+              "type": "constant"
+            },
+            "name": "handoffSummary",
+            "type": "context"
+          }
+        ],
+        "async": false
+      },
+      "type": "basic",
+      "childNodes": [
+        {
+          "name": "",
+          "nodeId": "80e93123-16a9-496a-86a2-fecabccc80f3",
+          "conditions": []
+        }
+      ],
+      "modalities": {},
+      "messages": [
+        {
+          "body": "I will connect you with card support about your damaged card or replacement. This assistant has not ordered a replacement.",
+          "skipTranslation": false,
+          "metadata": {},
+          "messageId": "e7e54634-a65e-44e0-b183-b64ed8f0feb0",
+          "type": "text"
+        }
+      ]
+    },
+    "ca000001-0000-4000-8000-000000000014": {
+      "nodeId": "ca000001-0000-4000-8000-000000000014",
+      "canvasMetadata": {
+        "x": 1500,
+        "isMinimized": false,
+        "y": 1000,
+        "width": 240,
+        "height": 195
+      },
+      "metadata": {
+        "name": "Cards: other",
+        "stateModifications": [
+          {
+            "modification": "set",
+            "value": {
+              "value": "card",
+              "type": "constant"
+            },
+            "name": "routingDepartment",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "other",
+              "type": "constant"
+            },
+            "name": "cardRequestType",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "Customer requests general card support or prefers to explain the issue to an agent. No banking action performed.",
+              "type": "constant"
+            },
+            "name": "handoffSummary",
+            "type": "context"
+          }
+        ],
+        "async": false
+      },
+      "type": "basic",
+      "childNodes": [
+        {
+          "name": "",
+          "nodeId": "80e93123-16a9-496a-86a2-fecabccc80f3",
+          "conditions": []
+        }
+      ],
+      "modalities": {},
+      "messages": [
+        {
+          "body": "I will connect you with a card support agent.",
+          "skipTranslation": false,
+          "metadata": {},
+          "messageId": "c54139fe-8d7d-4133-aa47-23cc2681546d",
+          "type": "text"
+        }
+      ]
+    },
+    "ca000001-0000-4000-8000-000000000002": {
+      "nodeId": "ca000001-0000-4000-8000-000000000002",
+      "canvasMetadata": {
+        "x": 1500,
+        "isMinimized": false,
+        "y": 1400,
+        "width": 240,
+        "height": 195
+      },
+      "metadata": {
+        "name": "Cards: unknown",
+        "stateModifications": [
+          {
+            "modification": "set",
+            "value": {
+              "value": "card",
+              "type": "constant"
+            },
+            "name": "routingDepartment",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "unknown",
+              "type": "constant"
+            },
+            "name": "cardRequestType",
+            "type": "context"
+          },
+          {
+            "modification": "set",
+            "value": {
+              "value": "Card support requested; reason could not be confirmed due to timeout or conversation failure. No banking action performed.",
+              "type": "constant"
+            },
+            "name": "handoffSummary",
+            "type": "context"
+          }
+        ],
+        "async": false
+      },
+      "type": "basic",
+      "childNodes": [
+        {
+          "name": "",
+          "nodeId": "80e93123-16a9-496a-86a2-fecabccc80f3",
+          "conditions": []
+        }
+      ],
+      "modalities": {},
+      "messages": [
+        {
+          "body": "I could not confirm the details. I will connect you with a card support agent.",
+          "skipTranslation": false,
+          "metadata": {},
+          "messageId": "c3a74c30-2d1e-4938-8c55-0f34587a6b03",
+          "type": "text"
+        }
+      ]
+    },
+    "ca000001-0000-4000-8000-000000000001": {
+      "nodeId": "ca000001-0000-4000-8000-000000000001",
+      "canvasMetadata": {
+        "x": 1100,
+        "isMinimized": false,
+        "y": 0,
+        "width": 280,
+        "height": 400
+      },
+      "metadata": {
+        "name": "Clarify card request",
+        "stateModifications": [],
+        "async": false,
+        "generativeJourney": {
+          "temperature": 0.2,
+          "exitConditions": [
+            {
+              "name": "lost_stolen",
+              "prompt": "Caller confirms a lost or stolen card. Takes precedence over all other card reasons."
+            },
+            {
+              "name": "unrecognized_charge",
+              "prompt": "Caller confirms a card charge they do not recognize or did not make, without a lost or stolen card."
+            },
+            {
+              "name": "blocked_declined",
+              "prompt": "Caller confirms a blocked card or declined card purchase, without loss, theft, or an unrecognized charge."
+            },
+            {
+              "name": "damaged_replacement",
+              "prompt": "Caller confirms a damaged or worn card requiring replacement, without loss, theft, or an unrecognized charge."
+            },
+            {
+              "name": "other",
+              "prompt": "Caller confirms another card issue or requests a card support agent without providing details."
+            }
+          ],
+          "maxTokens": 8192,
+          "enableZeroTurnMode": false,
+          "maxSteps": 6,
+          "modelType": "anthropic.claude-haiku-4-5",
+          "promptVersion": "latest",
+          "prompt": "You are River, AnyBank telephone assistant. The caller selected card support. Classify the request as lost_stolen, unrecognized_charge, blocked_declined, damaged_replacement, or other. Use the conversation already provided; do not ask the caller to repeat a clear explanation. Ask one short clarifying question if necessary. Briefly confirm the reason before exiting through its matching condition. Accept corrections. If the caller requests a human without explaining, use other without insisting on details. Prioritize lost/stolen, then unrecognized charge, then blocked/declined, then damage/replacement. Do not call an unrecognized charge confirmed fraud or infer the cause of a decline. Never request full card/account numbers, PINs, CVVs, passwords, or one-time codes. Do not verify identity or VIP membership. No tools are connected: never claim to inspect transactions, block/unlock a card, file a dispute, issue a refund, or order a replacement. A human agent must review the request. Do not promise resolution times or refunds. Speak in the caller language, with short sentences and one question at a time. Do not classify a bank transfer as a card purchase. If the caller selected the wrong department, use other to reach a human.",
+          "tools": []
+        }
+      },
+      "type": "generative_journey",
+      "childNodes": [
+        {
+          "name": "",
+          "nodeId": "ca000001-0000-4000-8000-000000000010",
+          "conditions": [
+            {
+              "right": {
+                "value": 0,
+                "type": "constant"
+              },
+              "left": {
+                "name": "System.gjConditionIndex",
+                "type": "system"
+              },
+              "operator": "eq"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "nodeId": "ca000001-0000-4000-8000-000000000011",
+          "conditions": [
+            {
+              "right": {
+                "value": 1,
+                "type": "constant"
+              },
+              "left": {
+                "name": "System.gjConditionIndex",
+                "type": "system"
+              },
+              "operator": "eq"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "nodeId": "ca000001-0000-4000-8000-000000000012",
+          "conditions": [
+            {
+              "right": {
+                "value": 2,
+                "type": "constant"
+              },
+              "left": {
+                "name": "System.gjConditionIndex",
+                "type": "system"
+              },
+              "operator": "eq"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "nodeId": "ca000001-0000-4000-8000-000000000013",
+          "conditions": [
+            {
+              "right": {
+                "value": 3,
+                "type": "constant"
+              },
+              "left": {
+                "name": "System.gjConditionIndex",
+                "type": "system"
+              },
+              "operator": "eq"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "nodeId": "ca000001-0000-4000-8000-000000000014",
+          "conditions": [
+            {
+              "right": {
+                "value": 4,
+                "type": "constant"
+              },
+              "left": {
+                "name": "System.gjConditionIndex",
+                "type": "system"
+              },
+              "operator": "eq"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "nodeId": "ca000001-0000-4000-8000-000000000002",
+          "conditions": [
+            {
+              "right": {
+                "value": "timeout",
+                "type": "constant"
+              },
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "nodeId": "ca000001-0000-4000-8000-000000000002",
+          "conditions": [
+            {
+              "right": {
+                "value": "failure",
+                "type": "constant"
+              },
+              "left": {
+                "type": "node_status"
+              },
+              "operator": "eq"
+            }
+          ]
+        }
+      ],
+      "modalities": {},
+      "messages": []
+    }
+  }
+}
