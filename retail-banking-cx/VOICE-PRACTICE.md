@@ -104,3 +104,8 @@ Deleting historical files from this branch reduces the working tree; it does not
 - Add explicit fallback and unknown recovery behavior instead of reusing the imported Main assistant.
 - Recreate and configure the read-only backend before enabling banking tools. The current workspace contains Data request definitions but no backend Secrets; the AI journey currently has no tools attached.
 - Test silence/timeouts, failures, unavailable agents, queue capacity, cross-team delay and each specialty independently.
+
+## Local cards expansion
+
+The expanded working definition is documented in [Cards expansion](CARDS-EXPANSION.md). It adds five card support reasons before the existing cards handoff. The original snapshots remain unchanged; destination deployment and call tests are pending.
+

@@ -1,0 +1,13 @@
+{
+  "path": "",
+  "disallowExternalModification": true,
+  "type": "text",
+  "key": "cardRequestType",
+  "schema": {
+    "title": "",
+    "description": "Card support reason: lost_stolen, unrecognized_charge, blocked_declined, damaged_replacement, other, or unknown after failure/timeout.",
+    "isSensitive": false,
+    "type": "string"
+  },
+  "tags": []
+}
